@@ -3,73 +3,168 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ร้านขายด้วงออนไลน์</title>
+  <title>ร้านขายด้วงออนไลน์ - ผู้บ่าวขายด้วง</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100">
+<body class="bg-green-50 text-gray-800">
 
   <!-- Header -->
-  <header class="bg-green-700 text-white shadow-md">
+  <header class="bg-green-600 text-white shadow-md sticky top-0 z-50">
     <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold">🪲 ร้านขายด้วง</h1>
-      <nav class="space-x-4">
-        <a href="#" class="hover:text-yellow-300">หน้าแรก</a>
-        <a href="#" class="hover:text-yellow-300">สินค้า</a>
-        <a href="#" class="hover:text-yellow-300">ติดต่อ</a>
+      <h1 class="text-2xl font-bold">🪲 ผู้บ่าวขายด้วง</h1>
+      <nav class="space-x-4 font-semibold">
+        <a href="#larva" class="hover:text-yellow-300">หนอน</a>
+        <a href="#adult" class="hover:text-yellow-300">ด้วงเต็มวัย</a>
+        <a href="#set" class="hover:text-yellow-300">Set เลี้ยง</a>
+        <a href="#accessory" class="hover:text-yellow-300">อุปกรณ์</a>
+        <a href="#contact" class="hover:text-yellow-300">ติดต่อ</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="bg-green-200 py-12 text-center">
-    <h2 class="text-3xl font-bold text-green-900">ยินดีต้อนรับสู่ร้านขายด้วง</h2>
-    <p class="text-green-800 mt-2">เรามีด้วงคุณภาพหลากหลายสายพันธุ์ให้เลือก</p>
+  <section class="bg-gradient-to-r from-green-200 to-green-300 py-12 text-center">
+    <h2 class="text-3xl font-bold text-green-900">ยินดีต้อนรับสู่ร้านขายด้วงออนไลน์</h2>
+    <p class="text-green-800 mt-2">หนอน & ด้วงสายพันธุ์พิเศษ พร้อมอุปกรณ์เลี้ยงครบชุด</p>
   </section>
 
-  <!-- Product Grid -->
   <main class="max-w-6xl mx-auto py-10 px-4">
-    <h3 class="text-2xl font-semibold mb-6">สินค้าแนะนำ</h3>
+
+    <!-- Larva Section -->
+    <h3 id="larva" class="text-2xl font-semibold mb-6 text-green-700">🐛 หนอน / Larva</h3>
     <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 
-      <!-- Product Card -->
-      <div class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition">
-        <img src="https://via.placeholder.com/300x200" alt="ด้วงคีมญี่ปุ่น" class="w-full h-40 object-cover">
-        <div class="p-4">
-          <h4 class="text-lg font-bold">ด้วงคีมญี่ปุ่น</h4>
-          <p class="text-gray-600 text-sm">แข็งแรง สวยงาม เหมาะสำหรับเลี้ยงโชว์</p>
-          <p class="mt-2 text-green-700 font-bold">฿350</p>
-          <button class="mt-3 w-full bg-green-600 text-white py-2 rounded-xl hover:bg-green-700">สั่งซื้อ</button>
-        </div>
+      <div class="bg-white shadow-md rounded-2xl p-4 hover:shadow-xl transition">
+        <h4 class="text-lg font-bold text-green-800">หนอนกว่างเฮอคิวริส</h4>
+        <p class="text-sm text-gray-600 italic">Dynastes hercules</p>
+        <p class="mt-2">L1-2 <span class="font-bold text-green-700">฿500/ตัว</span></p>
+        <p class="text-red-600 text-sm">🔥 โปร 3 ตัว 1300 ส่งฟรี</p>
+        <p class="text-sm mt-1">แบบรู้เพศ L3 ต้น คู่ละ ฿1200</p>
       </div>
 
-      <!-- Product Card -->
-      <div class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition">
-        <img src="https://via.placeholder.com/300x200" alt="ด้วงกว่างสองเขา" class="w-full h-40 object-cover">
-        <div class="p-4">
-          <h4 class="text-lg font-bold">ด้วงกว่างสองเขา</h4>
-          <p class="text-gray-600 text-sm">นักสู้ประจำป่า แข็งแกร่ง</p>
-          <p class="mt-2 text-green-700 font-bold">฿500</p>
-          <button class="mt-3 w-full bg-green-600 text-white py-2 rounded-xl hover:bg-green-700">สั่งซื้อ</button>
-        </div>
+      <div class="bg-white shadow-md rounded-2xl p-4 hover:shadow-xl transition">
+        <h4 class="text-lg font-bold text-green-800">หนอนกว่างช้างเผือก</h4>
+        <p>L3 คู่ละ <span class="font-bold text-green-700">฿1500</span></p>
       </div>
 
-      <!-- Product Card -->
-      <div class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition">
-        <img src="https://via.placeholder.com/300x200" alt="ด้วงดิน" class="w-full h-40 object-cover">
-        <div class="p-4">
-          <h4 class="text-lg font-bold">ด้วงดิน</h4>
-          <p class="text-gray-600 text-sm">ดูแลง่าย เหมาะสำหรับมือใหม่</p>
-          <p class="mt-2 text-green-700 font-bold">฿150</p>
-          <button class="mt-3 w-full bg-green-600 text-white py-2 rounded-xl hover:bg-green-700">สั่งซื้อ</button>
-        </div>
+      <div class="bg-white shadow-md rounded-2xl p-4 hover:shadow-xl transition">
+        <h4 class="text-lg font-bold text-green-800">ด้วงกว่างคาบูโตะแดง</h4>
+        <p>L1-2 <span class="font-bold text-green-700">฿200/ตัว</span></p>
+        <p class="text-sm">แบบรู้เพศ คู่ละ ฿400</p>
       </div>
 
+      <div class="bg-white shadow-md rounded-2xl p-4 hover:shadow-xl transition">
+        <h4 class="text-lg font-bold text-green-800">ด้วงกว่างคาบูโตะดำ</h4>
+        <p>L1-2 <span class="font-bold text-green-700">฿200/ตัว</span></p>
+        <p class="text-sm">แบบรู้เพศ คู่ละ ฿350</p>
+      </div>
+
+      <div class="bg-white shadow-md rounded-2xl p-4 hover:shadow-xl transition">
+        <h4 class="text-lg font-bold text-green-800">ด้วงกว่างทิทิอุส</h4>
+        <p>L3 คู่ละ <span class="font-bold text-green-700">฿800</span></p>
+      </div>
+
+      <div class="bg-white shadow-md rounded-2xl p-4 hover:shadow-xl transition">
+        <h4 class="text-lg font-bold text-green-800">ด้วงสามเขาโมเลนแคมป์ (อินโด)</h4>
+        <p>L3 คู่ละ <span class="font-bold text-green-700">฿800</span></p>
+      </div>
+
+      <div class="bg-white shadow-md rounded-2xl p-4 hover:shadow-xl transition">
+        <h4 class="text-lg font-bold text-green-800">ด้วงสามเขาคอเค CCB</h4>
+        <p>L3 คู่ละ <span class="font-bold text-green-700">฿600</span></p>
+      </div>
+
+      <div class="bg-white shadow-md rounded-2xl p-4 hover:shadow-xl transition">
+        <h4 class="text-lg font-bold text-green-800">ด้วงกว่าง 5 เขาใต้</h4>
+        <p>L3 คู่ละ <span class="font-bold text-green-700">฿1500</span></p>
+      </div>
+
+      <!-- เพิ่มหนอนอื่น ๆ ต่อได้ -->
     </div>
+
+    <!-- Adult Beetles Section -->
+    <h3 id="adult" class="text-2xl font-semibold my-8 text-green-700">🪲 ด้วงเต็มวัย / Adult Beetles</h3>
+    <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div class="bg-white shadow-md rounded-2xl p-4 hover:shadow-xl transition">
+        <h4 class="text-lg font-bold text-green-800">กว่างชนไทย ตัวเพาะ</h4>
+        <p>ขนาด 60+ <span class="font-bold text-green-700">฿300/ตัว</span></p>
+      </div>
+      <div class="bg-white shadow-md rounded-2xl p-4 hover:shadow-xl transition">
+        <h4 class="text-lg font-bold text-green-800">ด้วงคีมฟันเลื่อยเหนือ</h4>
+        <p>80+ คู่ละ <span class="font-bold text-green-700">฿1000</span></p>
+        <p>75+ คู่ละ ฿800</p>
+        <p>70+ คู่ละ ฿500</p>
+      </div>
+      <div class="bg-white shadow-md rounded-2xl p-4 hover:shadow-xl transition">
+        <h4 class="text-lg font-bold text-green-800">ด้วงสามเขาแอตลาส</h4>
+        <p>70–75 mm ฿600</p>
+        <p>75–80 mm ฿800</p>
+        <p>80–85 mm ฿900</p>
+      </div>
+      <div class="bg-white shadow-md rounded-2xl p-4 hover:shadow-xl transition">
+        <h4 class="text-lg font-bold text-green-800">ด้วงคีมยีราฟ</h4>
+        <p>90+ คู่ละ <span class="font-bold text-green-700">฿1200</span></p>
+      </div>
+    </div>
+
+    <!-- Set Section -->
+    <h3 id="set" class="text-2xl font-semibold my-8 text-green-700">🎁 Set เลี้ยงตัวอ่อน</h3>
+    <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+      <div class="bg-white shadow-md rounded-2xl p-4 hover:shadow-xl transition">
+        <h4 class="text-lg font-bold text-green-800">Set ด้วงกว่างสามเขาคอเคซัส</h4>
+        <p class="text-red-600 font-bold mt-2">🔥 1000 ส่งฟรี</p>
+        <ul class="text-sm mt-2 list-disc list-inside text-gray-700">
+          <li>หนอน L3 1 คู่ ผู้+เมีย</li>
+          <li>กระปุก 2 ใบ</li>
+          <li>อาหารตัวอ่อน 1 ถุง</li>
+          <li>ใบจดน้ำหนัก 1 ใบ</li>
+        </ul>
+      </div>
+      <div class="bg-white shadow-md rounded-2xl p-4 hover:shadow-xl transition">
+        <h4 class="text-lg font-bold text-green-800">Set ด้วงกว่างคาบูโตะ</h4>
+        <p class="text-red-600 font-bold mt-2">🔥 800 ส่งฟรี</p>
+        <ul class="text-sm mt-2 list-disc list-inside text-gray-700">
+          <li>หนอน L1-2 จำนวน 2 ตัว</li>
+          <li>กระปุก 2 ใบ</li>
+          <li>อาหารตัวอ่อน 1 ถุง</li>
+          <li>ใบจดน้ำหนัก 1 ใบ</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Accessories -->
+    <h3 id="accessory" class="text-2xl font-semibold my-8 text-green-700">⚙️ อุปกรณ์ / Accessories</h3>
+    <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+      <div class="bg-white shadow-md rounded-2xl p-4 hover:shadow-xl transition">
+        <h4 class="text-lg font-bold text-green-800">แท่นตัดเยลลี่ 🇯🇵</h4>
+        <p class="mt-2 text-green-700 font-bold">฿450/ชิ้น</p>
+        <p class="text-sm text-gray-600">ใช้ตัดปีโป้หรือเยลลี่ทรงยาวได้</p>
+      </div>
+      <div class="bg-white shadow-md rounded-2xl p-4 hover:shadow-xl transition">
+        <h4 class="text-lg font-bold text-green-800">Dmat Pro</h4>
+        <p class="mt-2 text-green-700 font-bold">฿180/ถุง</p>
+        <p class="text-sm text-gray-600">เหมาะกับกว่างใหญ่ เช่น เฮอคิวริส (5 ลิตร)</p>
+      </div>
+      <div class="bg-white shadow-md rounded-2xl p-4 hover:shadow-xl transition">
+        <h4 class="text-lg font-bold text-green-800">Dmat Natural</h4>
+        <p class="mt-2 text-green-700 font-bold">฿160/ถุง</p>
+        <p class="text-sm text-gray-600">เหมาะกับกว่างทั่วไป เช่น คาบูโตะ (9 ลิตร)</p>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <h3 id="contact" class="text-2xl font-semibold my-8 text-green-700">📱 ติดต่อร้าน</h3>
+    <div class="bg-white shadow-md rounded-2xl p-6">
+      <p class="mb-2">Facebook: <a href="#" class="text-green-600 font-bold">ผู้บ่าวขายด้วง</a></p>
+      <p class="mb-2">YouTube: <a href="#" class="text-green-600 font-bold">Twinbeetle</a></p>
+      <p class="mb-2">TikTok: <a href="#" class="text-green-600 font-bold">@Twinbeetle</a></p>
+    </div>
+
   </main>
 
   <!-- Footer -->
-  <footer class="bg-green-800 text-white py-6 text-center mt-10">
-    <p>© 2025 ร้านขายด้วงออนไลน์ - All rights reserved.</p>
+  <footer class="bg-green-700 text-white py-6 text-center mt-10">
+    <p>© 2025 ผู้บ่าวขายด้วง - Twinbeetle | All rights reserved.</p>
   </footer>
 
 </body>
