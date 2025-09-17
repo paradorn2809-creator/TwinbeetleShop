@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ยินดูต้อนรับทุกท่านเข้าสู่คลังสินค้าของเรา</title>
+  <title>ยินดีต้อนรับทุกท่านเข้าสู่คลังสินค้าของเรา</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-green-50">
@@ -48,7 +48,8 @@
         </div>
 
         <!-- หนอนกว่างช้างเผือก -->
-        <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition">
+        <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer"
+             onclick="openModal('หนอนกว่างช้างเผือก', 'L3 คู่ละ 1500฿', 'images/chaang-white.jpg')">
           <img src="images/chaang-white.jpg" alt="หนอนกว่างช้างเผือก"
                class="w-full h-40 object-cover rounded-lg mb-3">
           <h4 class="font-semibold text-lg text-green-700">หนอนกว่างช้างเผือก</h4>
@@ -56,16 +57,106 @@
         </div>
 
         <!-- หนอนกว่างช้างมาร์ -->
-        <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition">
+        <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer"
+             onclick="openModal('หนอนกว่างช้างมาร์', 'L3 คู่ละ 1500฿', 'images/chaang-mar.jpg')">
           <img src="images/chaang-mar.jpg" alt="หนอนกว่างช้างมาร์"
                class="w-full h-40 object-cover rounded-lg mb-3">
           <h4 class="font-semibold text-lg text-green-700">หนอนกว่างช้างมาร์</h4>
           <p class="text-gray-600 text-sm">L3 คู่ละ 1500฿</p>
         </div>
 
+        <!-- หนอนกว่างช้างโนกุ -->
+        <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer"
+             onclick="openModal('หนอนกว่างช้างโนกุ', 'L3 คู่ละ 1500฿', 'images/chaang-nogu.jpg')">
+          <img src="images/chaang-nogu.jpg" alt="หนอนกว่างช้างโนกุ"
+               class="w-full h-40 object-cover rounded-lg mb-3">
+          <h4 class="font-semibold text-lg text-green-700">หนอนกว่างช้างโนกุ</h4>
+          <p class="text-gray-600 text-sm">L3 คู่ละ 1500฿</p>
+        </div>
+
+        <!-- ด้วงกว่างคาบูโตะแดงตาชมพู -->
+        <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer"
+             onclick="openModal('คาบูโตะแดงตาชมพู', 'L3 คู่ละ 700฿', 'images/kabuto-red-pink.jpg')">
+          <img src="images/kabuto-red-pink.jpg" alt="ด้วงกว่างคาบูโตะแดงตาชมพู"
+               class="w-full h-40 object-cover rounded-lg mb-3">
+          <h4 class="font-semibold text-lg text-green-700">คาบูโตะแดงตาชมพู</h4>
+          <p class="text-gray-600 text-sm">L3 คู่ละ 700฿</p>
+        </div>
+
+        <!-- ด้วงกว่างคาบูโตะแดง -->
+        <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer"
+             onclick="openModal('คาบูโตะแดง', 'L1-2 ตัวละ 200฿<br>แบบรู้เพศ คู่ละ 400฿', 'images/kabuto-red.jpg')">
+          <img src="images/kabuto-red.jpg" alt="ด้วงกว่างคาบูโตะแดง"
+               class="w-full h-40 object-cover rounded-lg mb-3">
+          <h4 class="font-semibold text-lg text-green-700">คาบูโตะแดง</h4>
+          <p class="text-gray-600 text-sm">L1-2 ตัวละ 200฿</p>
+          <p class="text-gray-600 text-sm">แบบรู้เพศ คู่ละ 400฿</p>
+        </div>
+
       </div>
     </section>
 
+    <!-- Adult -->
+    <section>
+      <h3 class="text-2xl font-bold text-green-700 mb-6">🪲 ตัวเต็มวัย (Adult)</h3>
+      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+
+        <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer"
+             onclick="openModal('กว่างชนไทย', 'ตัวเพาะ 60+ mm 300฿', 'images/thai-rhino.jpg')">
+          <img src="images/thai-rhino.jpg" alt="กว่างชนไทย" 
+               class="w-full h-40 object-cover rounded-lg mb-3">
+          <h4 class="font-semibold text-lg text-green-700">กว่างชนไทย</h4>
+          <p class="text-gray-600 text-sm">ตัวเพาะ 60+ mm 300฿</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Set -->
+    <section>
+      <h3 class="text-2xl font-bold text-green-700 mb-6">📦 เซ็ตเลี้ยง (Starter Set)</h3>
+      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+
+        <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer"
+             onclick="openModal('Set คอเคซัส', '🔥1000฿ ส่งฟรี🔥<br>1 คู่หนอน L3 + อุปกรณ์ครบ', 'images/set-caucasus.jpg')">
+          <img src="images/set-caucasus.jpg" alt="Set คอเคซัส"
+               class="w-full h-40 object-cover rounded-lg mb-3">
+          <h4 class="font-semibold text-lg text-green-700">Set คอเคซัส</h4>
+          <p class="text-gray-600 text-sm">🔥1000฿ ส่งฟรี🔥<br>1 คู่หนอน L3 + อุปกรณ์ครบ</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer"
+             onclick="openModal('Set คาบูโตะ', '🔥800฿ ส่งฟรี🔥<br>2 ตัวหนอน L1-2 + อุปกรณ์ครบ', 'images/set-kabuto.jpg')">
+          <img src="images/set-kabuto.jpg" alt="Set คาบูโตะ"
+               class="w-full h-40 object-cover rounded-lg mb-3">
+          <h4 class="font-semibold text-lg text-green-700">Set คาบูโตะ</h4>
+          <p class="text-gray-600 text-sm">🔥800฿ ส่งฟรี🔥<br>2 ตัวหนอน L1-2 + อุปกรณ์ครบ</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accessories -->
+    <section>
+      <h3 class="text-2xl font-bold text-green-700 mb-6">🛠️ อุปกรณ์เลี้ยง (Accessories)</h3>
+      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+
+        <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer"
+             onclick="openModal('แท่นตัดเยลลี่', '450฿/ชิ้น (Made in Japan 🇯🇵)', 'images/jelly-cutter.jpg')">
+          <img src="images/jelly-cutter.jpg" alt="แท่นตัดเยลลี่"
+               class="w-full h-40 object-cover rounded-lg mb-3">
+          <h4 class="font-semibold text-lg text-green-700">แท่นตัดเยลลี่</h4>
+          <p class="text-gray-600 text-sm">450฿/ชิ้น (Made in Japan 🇯🇵)</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer"
+             onclick="openModal('Dmat Pro', '180฿/ถุง (5 ลิตร)', 'images/dmat-pro.jpg')">
+          <img src="images/dmat-pro.jpg" alt="Dmat Pro"
+               class="w-full h-40 object-cover rounded-lg mb-3">
+          <h4 class="font-semibold text-lg text-green-700">Dmat Pro</h4>
+          <p class="text-gray-600 text-sm">180฿/ถุง (5 ลิตร)</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Contact -->
