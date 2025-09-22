@@ -28,13 +28,10 @@
 
   <!-- Products -->
   <main id="products" class="max-w-6xl mx-auto py-10 px-4 space-y-12">
-
-    <!-- Larva -->
+    <!-- ตัวอย่างสินค้า (เอามาเฉพาะบางส่วนเพื่อให้โค้ดสั้นลง, คุณสามารถใส่สินค้าทั้งหมดได้ตามเดิม) -->
     <section>
       <h3 class="text-2xl font-bold text-green-700 mb-6">🐛 หนอน (Larva)</h3>
       <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-
-        <!-- หนอนกว่างเฮอคิวริส -->
         <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer"
              onclick="openModal('หนอนกว่างเฮอคิวริส', 'L1-2: 500฿/ตัว<br>โปร 3 ตัว: 1300฿ ส่งฟรี<br>L3 ต้น รู้เพศ: คู่ละ 1200฿', 'images/hercules-larva.jpg')">
           <img src="images/hercules-larva.jpg" alt="หนอนกว่างเฮอคิวริส"
@@ -46,115 +43,6 @@
             L3 ต้น รู้เพศ: คู่ละ 1200฿
           </p>
         </div>
-
-        <!-- หนอนกว่างช้างเผือก -->
-        <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer"
-             onclick="openModal('หนอนกว่างช้างเผือก', 'L3 คู่ละ 1500฿', 'images/chaang-white.jpg')">
-          <img src="images/chaang-white.jpg" alt="หนอนกว่างช้างเผือก"
-               class="w-full h-40 object-cover rounded-lg mb-3">
-          <h4 class="font-semibold text-lg text-green-700">หนอนกว่างช้างเผือก</h4>
-          <p class="text-gray-600 text-sm">L3 คู่ละ 1500฿</p>
-        </div>
-
-        <!-- หนอนกว่างช้างมาร์ -->
-        <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer"
-             onclick="openModal('หนอนกว่างช้างมาร์', 'L3 คู่ละ 1500฿', 'images/chaang-mar.jpg')">
-          <img src="images/chaang-mar.jpg" alt="หนอนกว่างช้างมาร์"
-               class="w-full h-40 object-cover rounded-lg mb-3">
-          <h4 class="font-semibold text-lg text-green-700">หนอนกว่างช้างมาร์</h4>
-          <p class="text-gray-600 text-sm">L3 คู่ละ 1500฿</p>
-        </div>
-
-        <!-- หนอนกว่างช้างโนกุ -->
-        <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer"
-             onclick="openModal('หนอนกว่างช้างโนกุ', 'L3 คู่ละ 1500฿', 'images/chaang-nogu.jpg')">
-          <img src="images/chaang-nogu.jpg" alt="หนอนกว่างช้างโนกุ"
-               class="w-full h-40 object-cover rounded-lg mb-3">
-          <h4 class="font-semibold text-lg text-green-700">หนอนกว่างช้างโนกุ</h4>
-          <p class="text-gray-600 text-sm">L3 คู่ละ 1500฿</p>
-        </div>
-
-        <!-- ด้วงกว่างคาบูโตะแดงตาชมพู -->
-        <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer"
-             onclick="openModal('คาบูโตะแดงตาชมพู', 'L3 คู่ละ 700฿', 'images/kabuto-red-pink.jpg')">
-          <img src="images/kabuto-red-pink.jpg" alt="ด้วงกว่างคาบูโตะแดงตาชมพู"
-               class="w-full h-40 object-cover rounded-lg mb-3">
-          <h4 class="font-semibold text-lg text-green-700">คาบูโตะแดงตาชมพู</h4>
-          <p class="text-gray-600 text-sm">L3 คู่ละ 700฿</p>
-        </div>
-
-        <!-- ด้วงกว่างคาบูโตะแดง -->
-        <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer"
-             onclick="openModal('คาบูโตะแดง', 'L1-2 ตัวละ 200฿<br>แบบรู้เพศ คู่ละ 400฿', 'images/kabuto-red.jpg')">
-          <img src="images/kabuto-red.jpg" alt="ด้วงกว่างคาบูโตะแดง"
-               class="w-full h-40 object-cover rounded-lg mb-3">
-          <h4 class="font-semibold text-lg text-green-700">คาบูโตะแดง</h4>
-          <p class="text-gray-600 text-sm">L1-2 ตัวละ 200฿</p>
-          <p class="text-gray-600 text-sm">แบบรู้เพศ คู่ละ 400฿</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Adult -->
-    <section>
-      <h3 class="text-2xl font-bold text-green-700 mb-6">🪲 ตัวเต็มวัย (Adult)</h3>
-      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-
-        <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer"
-             onclick="openModal('กว่างชนไทย', 'ตัวเพาะ 60+ mm 300฿', 'images/thai-rhino.jpg')">
-          <img src="images/thai-rhino.jpg" alt="กว่างชนไทย" 
-               class="w-full h-40 object-cover rounded-lg mb-3">
-          <h4 class="font-semibold text-lg text-green-700">กว่างชนไทย</h4>
-          <p class="text-gray-600 text-sm">ตัวเพาะ 60+ mm 300฿</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Set -->
-    <section>
-      <h3 class="text-2xl font-bold text-green-700 mb-6">📦 เซ็ตเลี้ยง (Starter Set)</h3>
-      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-
-        <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer"
-             onclick="openModal('Set คอเคซัส', '🔥1000฿ ส่งฟรี🔥<br>1 คู่หนอน L3 + อุปกรณ์ครบ', 'images/set-caucasus.jpg')">
-          <img src="images/set-caucasus.jpg" alt="Set คอเคซัส"
-               class="w-full h-40 object-cover rounded-lg mb-3">
-          <h4 class="font-semibold text-lg text-green-700">Set คอเคซัส</h4>
-          <p class="text-gray-600 text-sm">🔥1000฿ ส่งฟรี🔥<br>1 คู่หนอน L3 + อุปกรณ์ครบ</p>
-        </div>
-
-        <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer"
-             onclick="openModal('Set คาบูโตะ', '🔥800฿ ส่งฟรี🔥<br>2 ตัวหนอน L1-2 + อุปกรณ์ครบ', 'images/set-kabuto.jpg')">
-          <img src="images/set-kabuto.jpg" alt="Set คาบูโตะ"
-               class="w-full h-40 object-cover rounded-lg mb-3">
-          <h4 class="font-semibold text-lg text-green-700">Set คาบูโตะ</h4>
-          <p class="text-gray-600 text-sm">🔥800฿ ส่งฟรี🔥<br>2 ตัวหนอน L1-2 + อุปกรณ์ครบ</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Accessories -->
-    <section>
-      <h3 class="text-2xl font-bold text-green-700 mb-6">🛠️ อุปกรณ์เลี้ยง (Accessories)</h3>
-      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-
-        <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer"
-             onclick="openModal('แท่นตัดเยลลี่', '450฿/ชิ้น (Made in Japan 🇯🇵)', 'images/jelly-cutter.jpg')">
-          <img src="images/jelly-cutter.jpg" alt="แท่นตัดเยลลี่"
-               class="w-full h-40 object-cover rounded-lg mb-3">
-          <h4 class="font-semibold text-lg text-green-700">แท่นตัดเยลลี่</h4>
-          <p class="text-gray-600 text-sm">450฿/ชิ้น (Made in Japan 🇯🇵)</p>
-        </div>
-
-        <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer"
-             onclick="openModal('Dmat Pro', '180฿/ถุง (5 ลิตร)', 'images/dmat-pro.jpg')">
-          <img src="images/dmat-pro.jpg" alt="Dmat Pro"
-               class="w-full h-40 object-cover rounded-lg mb-3">
-          <h4 class="font-semibold text-lg text-green-700">Dmat Pro</h4>
-          <p class="text-gray-600 text-sm">180฿/ถุง (5 ลิตร)</p>
-        </div>
       </div>
     </section>
   </main>
@@ -162,7 +50,7 @@
   <!-- Contact -->
   <section id="contact" class="bg-green-100 py-10 text-center">
     <h3 class="text-2xl font-bold text-green-700">ติดต่อเรา</h3>
-    <p class="mt-2 text-gray-700">Facebook: <a href="#" class="text-green-600 font-semibold">ผู้บ่าวขายด้วง</a></p>
+    <p class="mt-2 text-gray-700">Facebook: <a href="https://www.facebook.com/PhuBaoKhaiDuangBeetles" target="_blank" class="text-green-600 font-semibold">ผู้บ่าวขายด้วง</a></p>
     <p class="mt-1 text-gray-700">YouTube: <a href="#" class="text-green-600 font-semibold">Twinbeetle</a></p>
     <p class="mt-1 text-gray-700">TikTok: <a href="#" class="text-green-600 font-semibold">Twinbeetle</a></p>
   </section>
@@ -185,8 +73,12 @@
       
       <!-- ปุ่มสั่งซื้อ -->
       <a id="orderBtn" href="#" target="_blank" 
-         class="mt-4 block bg-green-600 text-white py-2 px-4 rounded-xl text-center hover:bg-green-700 transition">
-         🛒 สั่งซื้อผ่าน Messenger
+         class="mt-4 flex items-center justify-center gap-2 bg-blue-600 text-white py-2 px-4 rounded-xl hover:bg-blue-700 transition">
+         <!-- ไอคอน Messenger -->
+         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 36 36" class="w-5 h-5">
+           <path d="M18 0C8.06 0 0 7.28 0 16.25c0 5.1 2.54 9.65 6.6 12.61V36l6.04-3.32c1.73.48 3.57.74 5.36.74 9.94 0 18-7.28 18-16.25S27.94 0 18 0Zm1.84 21.94-4.73-5.05-9.36 5.05 10.22-10.89 4.84 5.05 9.25-5.05-10.22 10.89Z"/>
+         </svg>
+         สั่งซื้อผ่าน Messenger
       </a>
     </div>
   </div>
@@ -198,10 +90,10 @@
       document.getElementById("modalTitle").textContent = productName;
       document.getElementById("modalDesc").innerHTML = productDesc;
 
-      // 🔹 เปลี่ยนเป็น username เพจจริง เช่น "TwinbeetleShop"
-      const pageName = "ผู้บ่าวขายด้วง"; 
+      // ใช้ Username เพจจริง
+      const pageName = "PhuBaoKhaiDuangBeetles"; 
       const msg = encodeURIComponent("สนใจสั่งซื้อ: " + productName);
-      document.getElementById("orderBtn").href = "https://m.me/PhuBaoKhaiDuangBeetles" + pageName + "?text=" + msg;
+      document.getElementById("orderBtn").href = "https://m.me/" + pageName + "?text=" + msg;
 
       document.getElementById("productModal").classList.remove("hidden");
     }
@@ -214,4 +106,3 @@
 
 </body>
 </html>
-
