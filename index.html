@@ -3,114 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ร้านผู้บ่าวขายด้วง</title>
+  <title>ยินดีต้อนรับสู่ร้านขายด้วง</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="bg-green-50">
 
   <!-- Header -->
-  <header class="bg-green-700 text-white p-4 text-center text-xl font-bold">
-    🪲 ร้านผู้บ่าวขายด้วง
+  <header class="bg-green-600 text-white shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold">🪲 TwinBeetle Shop</h1>
+      <nav class="space-x-4">
+        <a href="#" class="hover:text-yellow-300">หน้าแรก</a>
+        <a href="#products" class="hover:text-yellow-300">สินค้า</a>
+        <a href="#contact" class="hover:text-yellow-300">ติดต่อ</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Product List -->
-  <main id="productList" class="p-6 grid grid-cols-1 md:grid-cols-3 gap-6"></main>
+  <!-- Products -->
+  <main id="products" class="max-w-6xl mx-auto py-10 px-4">
+    <section>
+      <h3 class="text-2xl font-bold text-green-700 mb-6">🐛 หนอน (Larva)</h3>
+      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 
-  <!-- Modal -->
-  <div id="productModal" class="fixed inset-0 hidden bg-black bg-opacity-50 flex items-center justify-center z-50">
-    <div class="bg-white rounded-2xl p-6 max-w-sm w-full shadow-lg relative">
-      <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-600 hover:text-red-600 text-xl">✖</button>
-      <img id="modalImg" src="" alt="สินค้า" class="w-full h-48 object-cover rounded-lg mb-4">
-      <h2 id="modalTitle" class="text-xl font-bold mb-2">ชื่อสินค้า</h2>
-      <p id="modalDesc" class="text-gray-700 mb-2">รายละเอียดสินค้า</p>
-      <p id="modalPrice" class="text-red-600 font-bold mb-6">ราคา</p>
-      <!-- Messenger Button -->
-      <a id="orderBtn" target="_blank"
-        class="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl shadow">
-        <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="Messenger" class="w-5 h-5">
-        🛒 สั่งซื้อผ่าน Messenger
-      </a>
+        <!-- หนอนกว่างเฮอคิวริส -->
+        <div onclick="openPopup('หนอนกว่างเฮอคิวริส','L3 ต้น รู้เพศ: คู่ละ 1200฿')" 
+             class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
+          <img src="images/hercules-larva.jpg" alt="หนอนกว่างเฮอคิวริส"
+               class="w-full h-40 object-cover rounded-lg mb-3">
+          <h4 class="font-semibold text-lg text-green-700">หนอนกว่างเฮอคิวริส</h4>
+          <p class="text-gray-600 text-sm">L1-2: 500฿/ตัว<br>โปร 3 ตัว: 1300฿ ส่งฟรี<br>L3 ต้น รู้เพศ: คู่ละ 1200฿</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Popup -->
+  <div id="popup" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white p-6 rounded-xl max-w-md w-full shadow-lg">
+      <h3 id="popupTitle" class="text-xl font-bold text-green-700"></h3>
+      <p id="popupDetail" class="text-gray-700 mt-2"></p>
+
+      <div class="mt-4 flex justify-end space-x-3">
+        <button onclick="closePopup()" class="px-4 py-2 bg-gray-300 rounded-lg">ปิด</button>
+        <a id="buyLink" target="_blank"
+           class="px-4 py-2 bg-blue-600 text-white rounded-lg">
+           สั่งซื้อทาง Messenger
+        </a>
+      </div>
     </div>
   </div>
 
   <script>
-    // ✅ Username ของเพจ
-    const pageName = "twin.beetle";
+    function openPopup(title, detail) {
+      document.getElementById("popupTitle").innerText = title;
+      document.getElementById("popupDetail").innerText = detail;
 
-    // ✅ รายการสินค้า (แบ่งหมวดหมู่)
-    const products = [
-      // 🐛 หนอน
-      { name: "หนอนกว่างเฮอคิวริส L1-2", desc: "Dynastes hercules ระยะ L1-2 โปร 3 ตัว 1300 ส่งฟรี", price: "500/ตัว", img: "https://via.placeholder.com/200" },
-      { name: "หนอนกว่างเฮอคิวริส L3", desc: "แบบรู้เพศ L3 ต้น", price: "คู่ละ 1200", img: "https://via.placeholder.com/200" },
-      { name: "หนอนกว่างช้างเผือก L3", desc: "", price: "คู่ละ 1500", img: "https://via.placeholder.com/200" },
-      { name: "หนอนกว่างช้างมาร์ L3", desc: "", price: "คู่ละ 1500", img: "https://via.placeholder.com/200" },
-      { name: "หนอนกว่างช้างโนกุ L3", desc: "", price: "คู่ละ 1500", img: "https://via.placeholder.com/200" },
-      { name: "ด้วงกว่างคาบูโตะแดงตาชมพู L3", desc: "", price: "คู่ละ 700", img: "https://via.placeholder.com/200" },
-      { name: "ด้วงกว่างคาบูโตะแดง L1-2", desc: "แบบรู้เพศ", price: "200/ตัว, คู่ละ 400", img: "https://via.placeholder.com/200" },
-      { name: "ด้วงกว่างคาบูโตะดำ L1-2", desc: "แบบรู้เพศ", price: "200/ตัว, คู่ละ 350", img: "https://via.placeholder.com/200" },
-      { name: "ด้วงกว่างทิทิอุส L3", desc: "", price: "คู่ละ 800", img: "https://via.placeholder.com/200" },
-      { name: "หนอนด้วงสามเขาโมเลนแคมป์ (อินโด) L3", desc: "", price: "คู่ละ 800", img: "https://via.placeholder.com/200" },
-      { name: "หนอนด้วงสามเขาคอเค CCB L3", desc: "", price: "คู่ละ 600", img: "https://via.placeholder.com/200" },
-      { name: "หนอนด้วงกว่าง 5 เขาใต้ L3", desc: "", price: "คู่ละ 1500", img: "https://via.placeholder.com/200" },
-      { name: "หนอนด้วงคีมสายรุ้ง L1-2", desc: "", price: "300/ตัว", img: "https://via.placeholder.com/200" },
-      { name: "หนอนคีมกระทิงดำ L1-2", desc: "", price: "200/ตัว", img: "https://via.placeholder.com/200" },
-      { name: "หนอนคีมเมทาลิเฟอร์ ม่วง-ทอง", desc: "", price: "300/ตัว", img: "https://via.placeholder.com/200" },
-      { name: "หนอนด้วงดอดไม้เดอเบียน่า L1", desc: "", price: "150/ตัว", img: "https://via.placeholder.com/200" },
+      // ✅ ใส่ Username เพจของคุณตรงนี้ เช่น TwinbeetleShop
+      const pageUsername = "PhuBaoKhaiDuangBeetles";  
 
-      // 🪲 ตัวเต็มวัย
-      { name: "กว่างชนไทย (เพาะ) ขนาด 60+", desc: "", price: "300/ตัว", img: "https://via.placeholder.com/200" },
-      { name: "ด้วงคีมฟันเลื่อยเหนือ", desc: "ขนาด 80+ 1000/คู่, 75+ 800/คู่, 70+ 500/คู่, 65+ 400/คู่", price: "", img: "https://via.placeholder.com/200" },
-      { name: "ด้วงสามเขาแอตลาส", desc: "ขนาด 70-75mm 600, 75-80mm 800, 80-85mm 900", price: "", img: "https://via.placeholder.com/200" },
-      { name: "ด้วงคีมกระทิง 55-60mm", desc: "", price: "คู่ละ 400", img: "https://via.placeholder.com/200" },
-      { name: "ด้วงกว่างซางหูกระต่าย", desc: "", price: "600/คู่", img: "https://via.placeholder.com/200" },
-      { name: "ด้วงกว่าง 5 เขา", desc: "", price: "300/คู่", img: "https://via.placeholder.com/200" },
-      { name: "ด้วงคีมยีราฟ 90+", desc: "", price: "1200/คู่", img: "https://via.placeholder.com/200" },
+      // ✅ ข้อความที่ส่งไป Messenger (encode ให้ถูกต้อง)
+      const message = encodeURIComponent(`ผมสนใจสั่งซื้อ ${title} - ${detail}`);
 
-      // 🔥 Set
-      { name: "Set เลี้ยงตัวอ่อนด้วงกว่างสามเขาคอเคซัส", desc: "ประกอบด้วย: หนอน L3 1 คู่, กระปุก 2 ใบ, อาหารตัวอ่อน 1 ถุง, ใบจดน้ำหนัก", price: "1000 ส่งฟรี", img: "https://via.placeholder.com/200" },
-      { name: "Set เลี้ยงตัวอ่อนด้วงกว่างคาบูโตะ", desc: "ประกอบด้วย: หนอน L1-2 2 ตัว, กระปุก 2 ใบ, อาหารตัวอ่อน 1 ถุง, ใบจดน้ำหนัก", price: "800 ส่งฟรี", img: "https://via.placeholder.com/200" },
+      document.getElementById("buyLink").href = `https://m.me/${pageUsername}?text=${message}`;
 
-      // 🛠️ อุปกรณ์
-      { name: "แท่นตัดเยลลี่ (Made in Japan)", desc: "ตัดปีโป้/เยลลี่แบ่งครึ่งได้", price: "450/ชิ้น", img: "https://via.placeholder.com/200" },
-
-      // 🍂 อาหารตัวอ่อน
-      { name: "Dmat pro", desc: "เหมาะกับกว่างใหญ่ เช่น สามเขา เฮอคิวริส ปริมาตร 5 ลิตร", price: "180/ถุง", img: "https://via.placeholder.com/200" },
-      { name: "Dmat natural", desc: "เหมาะกับกว่างทั่วไป เช่น กว่างชน คาบูโตะ ปริมาตร 9 ลิตร", price: "160/ถุง", img: "https://via.placeholder.com/200" },
-      { name: "Elmat และ Lmat", desc: "สำหรับด้วงคีม", price: "180/ถุง", img: "https://via.placeholder.com/200" }
-    ];
-
-    // สร้างสินค้าแสดงบนหน้าเว็บ
-    const productList = document.getElementById("productList");
-    products.forEach((p, index) => {
-      productList.innerHTML += `
-        <div class="bg-white rounded-2xl shadow p-4 text-center">
-          <img src="${p.img}" alt="${p.name}" class="mx-auto mb-4 rounded-xl h-40 object-cover">
-          <h2 class="text-lg font-bold">${p.name}</h2>
-          <p class="text-gray-600">${p.price || ""}</p>
-          <button 
-            onclick="openModal(${index})" 
-            class="mt-4 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-xl shadow">
-            ดูรายละเอียด
-          </button>
-        </div>
-      `;
-    });
-
-    // เปิด Modal
-    function openModal(index) {
-      const product = products[index];
-      document.getElementById("modalTitle").innerText = product.name;
-      document.getElementById("modalDesc").innerText = product.desc;
-      document.getElementById("modalImg").src = product.img;
-      document.getElementById("modalPrice").innerText = product.price;
-      const msg = encodeURIComponent("สนใจสั่งซื้อ: " + product.name);
-      document.getElementById("orderBtn").href = "https://m.me/" + pageName + "?text=" + msg;
-      document.getElementById("productModal").classList.remove("hidden");
+      document.getElementById("popup").classList.remove("hidden");
     }
 
-    // ปิด Modal
-    function closeModal() {
-      document.getElementById("productModal").classList.add("hidden");
+    function closePopup() {
+      document.getElementById("popup").classList.add("hidden");
     }
   </script>
 
