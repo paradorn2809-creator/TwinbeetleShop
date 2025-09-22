@@ -22,21 +22,102 @@
 
   <!-- Products -->
   <main id="products" class="max-w-6xl mx-auto py-10 px-4">
+
+    <!-- 🐛 หนอน -->
     <section>
       <h3 class="text-2xl font-bold text-green-700 mb-6">🐛 หนอน (Larva)</h3>
       <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 
         <!-- หนอนกว่างเฮอคิวริส -->
-        <div onclick="openPopup('หนอนกว่างเฮอคิวริส','L3 ต้น รู้เพศ: คู่ละ 1200฿')" 
+        <div onclick="openPopup('หนอนกว่างเฮอคิวริส','L1-2: 500฿/ตัว | โปร 3 ตัว 1300฿ ส่งฟรี | L3 ต้น รู้เพศ คู่ละ 1200฿')" 
              class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
           <img src="images/hercules-larva.jpg" alt="หนอนกว่างเฮอคิวริส"
                class="w-full h-40 object-cover rounded-lg mb-3">
           <h4 class="font-semibold text-lg text-green-700">หนอนกว่างเฮอคิวริส</h4>
-          <p class="text-gray-600 text-sm">L1-2: 500฿/ตัว<br>โปร 3 ตัว: 1300฿ ส่งฟรี<br>L3 ต้น รู้เพศ: คู่ละ 1200฿</p>
+          <p class="text-gray-600 text-sm">L1-2: 500฿/ตัว<br>โปร 3 ตัว: 1300฿ ส่งฟรี<br>L3 รู้เพศ: คู่ละ 1200฿</p>
         </div>
 
       </div>
     </section>
+
+    <!-- 🪲 สินค้าเต็มวัย -->
+    <section class="mt-10">
+      <h3 class="text-2xl font-bold text-green-700 mb-6">🪲 สินค้าเต็มวัย (Adult Beetles)</h3>
+      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+
+        <!-- กว่างชนไทย -->
+        <div onclick="openPopup('กว่างชนไทย (ตัวเพาะ)','ขนาด 60+ ราคา 300฿/ตัว')" 
+             class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
+          <img src="images/thai-beetle.jpg" alt="กว่างชนไทย"
+               class="w-full h-40 object-cover rounded-lg mb-3">
+          <h4 class="font-semibold text-lg text-green-700">กว่างชนไทย (ตัวเพาะ)</h4>
+          <p class="text-gray-600 text-sm">ขนาด 60+ 300฿/ตัว</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 🎁 Set สุดคุ้ม -->
+    <section class="mt-10">
+      <h3 class="text-2xl font-bold text-green-700 mb-6">🎁 Set สุดคุ้ม (Value Sets)</h3>
+      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+
+        <!-- Set คอเคซัส -->
+        <div onclick="openPopup('Set เลี้ยงด้วงกว่างสามเขาคอเคซัส','🔥1000฿ ส่งฟรี🔥 | 1.คู่หนอน L3 ผู้-เมีย | 2.กระปุก 2 ใบ | 3.อาหาร 1 ถุง | 4.ใบจดน้ำหนัก')" 
+             class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
+          <img src="images/caucasus-set.jpg" alt="Set คอเคซัส"
+               class="w-full h-40 object-cover rounded-lg mb-3">
+          <h4 class="font-semibold text-lg text-green-700">Set เลี้ยงด้วงกว่างสามเขาคอเคซัส</h4>
+          <p class="text-gray-600 text-sm">🔥1000฿ ส่งฟรี🔥 (ครบชุดพร้อมเลี้ยง)</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 🛠 อุปกรณ์ -->
+    <section class="mt-10">
+      <h3 class="text-2xl font-bold text-green-700 mb-6">🛠 อุปกรณ์การเลี้ยง (Accessories)</h3>
+      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+
+        <!-- แท่นตัดเยลลี่ -->
+        <div onclick="openPopup('แท่นตัดเยลลี่ (Made in Japan 🇯🇵)','450฿/ชิ้น | ใช้ตัดปีโป้/เยลลี่ | แบ่งครึ่งได้')" 
+             class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
+          <img src="images/jelly-cutter.jpg" alt="แท่นตัดเยลลี่"
+               class="w-full h-40 object-cover rounded-lg mb-3">
+          <h4 class="font-semibold text-lg text-green-700">แท่นตัดเยลลี่</h4>
+          <p class="text-gray-600 text-sm">450฿/ชิ้น - made in Japan 🇯🇵</p>
+        </div>
+
+        <!-- Dmat Pro -->
+        <div onclick="openPopup('Dmat Pro','180฿/ถุง | เหมาะกับกว่างใหญ่ เช่น เฮอคิวริส | ปริมาตร 5 ลิตร')" 
+             class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
+          <img src="images/dmat-pro.jpg" alt="Dmat Pro"
+               class="w-full h-40 object-cover rounded-lg mb-3">
+          <h4 class="font-semibold text-lg text-green-700">Dmat Pro</h4>
+          <p class="text-gray-600 text-sm">180฿/ถุง - สำหรับกว่างใหญ่ (5 ลิตร)</p>
+        </div>
+
+        <!-- Dmat Natural -->
+        <div onclick="openPopup('Dmat Natural','160฿/ถุง | เหมาะกับกว่างทั่วไป เช่น คาบูโตะ | ปริมาตร 9 ลิตร')" 
+             class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
+          <img src="images/dmat-natural.jpg" alt="Dmat Natural"
+               class="w-full h-40 object-cover rounded-lg mb-3">
+          <h4 class="font-semibold text-lg text-green-700">Dmat Natural</h4>
+          <p class="text-gray-600 text-sm">160฿/ถุง - สำหรับกว่างทั่วไป (9 ลิตร)</p>
+        </div>
+
+        <!-- Elmat & Lmat -->
+        <div onclick="openPopup('Elmat & Lmat','180฿/ถุง | สำหรับด้วงคีม')" 
+             class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
+          <img src="images/elmat-lmat.jpg" alt="Elmat Lmat"
+               class="w-full h-40 object-cover rounded-lg mb-3">
+          <h4 class="font-semibold text-lg text-green-700">Elmat & Lmat</h4>
+          <p class="text-gray-600 text-sm">180฿/ถุง - สำหรับด้วงคีม</p>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <!-- Popup -->
@@ -60,12 +141,11 @@
       document.getElementById("popupTitle").innerText = title;
       document.getElementById("popupDetail").innerText = detail;
 
-      // ✅ ใส่ Username เพจของคุณตรงนี้ เช่น TwinbeetleShop
+      // ✅ Username เพจจริงของคุณ
       const pageUsername = "PhuBaoKhaiDuangBeetles";  
 
-      // ✅ ข้อความที่ส่งไป Messenger (encode ให้ถูกต้อง)
+      // ✅ ใส่ข้อความที่ส่งไป Messenger
       const message = encodeURIComponent(`ผมสนใจสั่งซื้อ ${title} - ${detail}`);
-
       document.getElementById("buyLink").href = `https://m.me/${pageUsername}?text=${message}`;
 
       document.getElementById("popup").classList.remove("hidden");
