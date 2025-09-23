@@ -16,15 +16,8 @@
       background: linear-gradient(to bottom, #f9fbe7, #fffde7);
       color: #1b1b1b;
     }
-
-    .navbar {
-      background: #2e7d32;
-    }
-    .navbar-brand, .nav-link {
-      color: white !important;
-      font-weight: 600;
-    }
-
+    .navbar { background: #2e7d32; }
+    .navbar-brand, .nav-link { color: white !important; font-weight: 600; }
     header {
       background: #ffeb3b;
       border-radius: 20px;
@@ -32,10 +25,12 @@
       padding: 40px 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
-    header h1 {
+    header h1 { color: #2e7d32; }
+    .section-title {
       color: #2e7d32;
+      margin: 50px 0 20px;
+      font-weight: bold;
     }
-
     .product-card {
       border-radius: 20px;
       overflow: hidden;
@@ -48,11 +43,7 @@
       transform: translateY(-10px);
       box-shadow: 0 12px 25px rgba(0,0,0,0.2);
     }
-    .card-title {
-      color: #388e3c;
-      font-weight: 600;
-    }
-
+    .card-title { color: #388e3c; font-weight: 600; }
     .btn-buy {
       background: linear-gradient(90deg, #4caf50, #2e7d32);
       color: white;
@@ -60,41 +51,23 @@
       border-radius: 12px;
       padding: 10px 20px;
       transition: 0.3s;
+      text-decoration: none;
+      display: inline-block;
     }
-    .btn-buy:hover {
-      opacity: 0.9;
-      transform: scale(1.05);
-    }
-
-    /* Modal style */
+    .btn-buy:hover { opacity: 0.9; transform: scale(1.05); }
     .modal-content {
       border-radius: 25px;
       padding: 20px;
       box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-      transition: transform 0.3s ease;
     }
-    .modal.fade .modal-dialog {
-      transform: translateY(-50px);
-      transition: transform 0.3s ease-out;
-    }
-    .modal.show .modal-dialog {
-      transform: translateY(0);
-    }
-
     .footer {
       background: #2e7d32;
       color: white;
       padding: 30px 0;
       margin-top: 40px;
     }
-    .footer a {
-      color: #ffeb3b;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    .footer a:hover {
-      color: white;
-    }
+    .footer a { color: #ffeb3b; text-decoration: none; transition: 0.3s; }
+    .footer a:hover { color: white; }
   </style>
 </head>
 <body>
@@ -112,30 +85,138 @@
   <p class="text-muted">ร้านขายด้วงครบวงจร — มั่นใจคุณภาพ พร้อมส่งทั่วไทย</p>
 </header>
 
-<!-- สินค้า -->
 <div class="container my-5">
+
+  <!-- ========== หมวด เต็มวัย ========== -->
+  <h3 class="section-title">🐞 เต็มวัย</h3>
   <div class="row g-4">
-    <!-- Product -->
     <div class="col-md-4">
-      <div class="card product-card shadow-sm" data-bs-toggle="modal" data-bs-target="#product1">
-        <img src="https://via.placeholder.com/400x250?text=หนอนกว่างเฮอร์คิวริส" class="card-img-top" alt="หนอนกว่างเฮอร์คิวริส">
+      <div class="card product-card" data-bs-toggle="modal" data-bs-target="#adult1">
+        <img src="https://via.placeholder.com/400x250?text=กว่างชนไทย" class="card-img-top">
         <div class="card-body text-center">
-          <h5 class="card-title">หนอนกว่างเฮอร์คิวริส</h5>
-          <p class="text-muted">หนอนกว่างสายพันธุ์หายาก</p>
+          <h5 class="card-title">กว่างชนไทยตัวเพาะ</h5>
+          <p class="text-muted">ขนาด 60+ 300/ตัว</p>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- ========== หมวด Set สุดคุ้ม ========== -->
+  <h3 class="section-title">🔥 Set สุดคุ้ม</h3>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card product-card" data-bs-toggle="modal" data-bs-target="#set1">
+        <img src="https://via.placeholder.com/400x250?text=Set+เลี้ยงสามเขา" class="card-img-top">
+        <div class="card-body text-center">
+          <h5 class="card-title">Set เลี้ยงตัวอ่อนสามเขา</h5>
+          <p class="text-muted">1000 บาท ส่งฟรี</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== หมวด อุปกรณ์การเลี้ยง ========== -->
+  <h3 class="section-title">🛠️ อุปกรณ์การเลี้ยง</h3>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card product-card" data-bs-toggle="modal" data-bs-target="#acc1">
+        <img src="https://via.placeholder.com/400x250?text=แท่นตัดเยลลี่" class="card-img-top">
+        <div class="card-body text-center">
+          <h5 class="card-title">แท่นตัดเยลลี่ (Made in Japan)</h5>
+          <p class="text-muted">450/ชิ้น</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== หมวด อาหารตัวอ่อน ========== -->
+  <h3 class="section-title">🐛 อาหารตัวอ่อน</h3>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card product-card" data-bs-toggle="modal" data-bs-target="#food1">
+        <img src="https://via.placeholder.com/400x250?text=Dmat+Pro" class="card-img-top">
+        <div class="card-body text-center">
+          <h5 class="card-title">Dmat Pro</h5>
+          <p class="text-muted">180/ถุง (5 ลิตร)</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card product-card" data-bs-toggle="modal" data-bs-target="#food2">
+        <img src="https://via.placeholder.com/400x250?text=Dmat+Natural" class="card-img-top">
+        <div class="card-body text-center">
+          <h5 class="card-title">Dmat Natural</h5>
+          <p class="text-muted">160/ถุง (9 ลิตร)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
-<!-- Modal Product -->
-<div class="modal fade" id="product1" tabindex="-1">
+<!-- ================= MODALS ================= -->
+
+<!-- Modal Adult -->
+<div class="modal fade" id="adult1" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content text-center">
-      <img src="https://via.placeholder.com/500x300?text=หนอนกว่างเฮอร์คิวริส" class="img-fluid rounded mb-3">
-      <h4 class="mb-3 text-success">หนอนกว่างเฮอร์คิวริส</h4>
-      <p class="mb-4">หนอนกว่างเฮอร์คิวริส คุณภาพดี แข็งแรง เลี้ยงง่าย</p>
-      <button class="btn-buy w-100" onclick="window.open('https://www.facebook.com/PhuBaoKhaiDuangBeetles','_blank')">สั่งซื้อผ่าน Facebook</button>
+      <img src="https://via.placeholder.com/500x300?text=กว่างชนไทย" class="img-fluid rounded mb-3">
+      <h4 class="mb-3 text-success">กว่างชนไทยตัวเพาะ ขนาด 60+</h4>
+      <p>ราคา 300 บาท/ตัว</p>
+      <a href="https://m.me/PhuBaoKhaiDuangBeetles?text=สนใจกว่างชนไทยตัวเพาะ ขนาด 60+ 1 ตัว" target="_blank" class="btn-buy w-100">สั่งซื้อผ่าน Messenger</a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Set -->
+<div class="modal fade" id="set1" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content text-center">
+      <img src="https://via.placeholder.com/500x300?text=Set+เลี้ยงสามเขา" class="img-fluid rounded mb-3">
+      <h4 class="mb-3 text-success">Set เลี้ยงตัวอ่อนด้วงกว่างสามเขา</h4>
+      <p>🔥 1000 บาท ส่งฟรี 🔥<br>ในชุดประกอบด้วย:<br>
+        1. หนอน L3 ผู้-เมีย<br>
+        2. กระปุก 2 ใบ<br>
+        3. อาหารตัวอ่อน 1 ถุง<br>
+        4. ใบจดน้ำหนัก 1 ใบ</p>
+      <a href="https://m.me/PhuBaoKhaiDuangBeetles?text=สวัสดีครับ สนใจ Set เลี้ยงตัวอ่อนด้วงกว่างสามเขา 1 ชุด" target="_blank" class="btn-buy w-100">สั่งซื้อผ่าน Messenger</a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Accessory -->
+<div class="modal fade" id="acc1" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content text-center">
+      <img src="https://via.placeholder.com/500x300?text=แท่นตัดเยลลี่" class="img-fluid rounded mb-3">
+      <h4 class="mb-3 text-success">แท่นตัดเยลลี่</h4>
+      <p>ราคา 450 บาท/ชิ้น 🇯🇵<br>
+      - ใช้ตัดปีโป้, เยลลี่<br>
+      - แบ่งครึ่งได้ง่าย</p>
+      <a href="https://m.me/PhuBaoKhaiDuangBeetles?text=ขอซื้อแท่นตัดเยลลี่ 1 ชิ้น" target="_blank" class="btn-buy w-100">สั่งซื้อผ่าน Messenger</a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Food -->
+<div class="modal fade" id="food1" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content text-center">
+      <img src="https://via.placeholder.com/500x300?text=Dmat+Pro" class="img-fluid rounded mb-3">
+      <h4 class="mb-3 text-success">Dmat Pro</h4>
+      <p>ราคา 180 บาท/ถุง (5 ลิตร)<br>เหมาะกับกว่างใหญ่ เช่น สามเขา, เฮอคิวริส</p>
+      <a href="https://m.me/PhuBaoKhaiDuangBeetles?text=ขอซื้อ Dmat Pro 1 ถุง" target="_blank" class="btn-buy w-100">สั่งซื้อผ่าน Messenger</a>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="food2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content text-center">
+      <img src="https://via.placeholder.com/500x300?text=Dmat+Natural" class="img-fluid rounded mb-3">
+      <h4 class="mb-3 text-success">Dmat Natural</h4>
+      <p>ราคา 160 บาท/ถุง (9 ลิตร)<br>เหมาะกับกว่างทั่วไป เช่น กว่างชน, คาบูโตะ</p>
+      <a href="https://m.me/PhuBaoKhaiDuangBeetles?text=ขอซื้อ Dmat Natural 1 ถุง" target="_blank" class="btn-buy w-100">สั่งซื้อผ่าน Messenger</a>
     </div>
   </div>
 </div>
@@ -146,7 +227,7 @@
     <h5>ติดต่อเรา</h5>
     <p>
       <a href="https://www.facebook.com/PhuBaoKhaiDuangBeetles" target="_blank">📘 Facebook: ผู้บ่าวขายด้วง</a><br>
-      <a href="https://youtube.com/@twinbeetle6472?si=m86eaFLw-w--HWwH" target="_blank">▶️ Youtube: TWINBEETLE</a><br>
+      <a href="https://youtube.com/@twinbeetle6472" target="_blank">▶️ Youtube: TWINBEETLE</a><br>
       <a href="https://www.tiktok.com/@twinbeetle" target="_blank">🎵 Tiktok: ผู้บ่าวขายด้วง</a>
     </p>
   </div>
