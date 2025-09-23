@@ -3,135 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TwinBeetle Shop - ผู้บ่าวขายด้วง</title>
+  <title>ร้านผู้บ่าวขายด้วง</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    :root {
-      --primary: #d8ab4e;
-      --secondary: #b48c36;
-      --dark: #040404;
-    }
-  </style>
 </head>
-<body class="bg-gradient-to-b from-yellow-50 to-yellow-100 font-sans text-[var(--dark)]">
+<body class="bg-gradient-to-br from-sky-100 via-purple-100 to-emerald-100 font-sans">
 
   <!-- Header -->
-  <header class="bg-[var(--primary)] text-white shadow-lg sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold">🪲 TwinBeetle Shop</h1>
-      <nav class="space-x-4 text-sm font-medium">
-        <a href="#products" class="hover:text-[var(--dark)]">สินค้า</a>
-        <a href="#contact" class="hover:text-[var(--dark)]">ติดต่อ</a>
-      </nav>
-    </div>
+  <header class="bg-gradient-to-r from-sky-400 to-emerald-400 text-white p-5 text-center text-2xl font-bold shadow-md">
+    🪲 ร้านผู้บ่าวขายด้วง
+    <p class="text-sm font-normal">ครบวงจรเรื่องด้วงสำหรับทุกวัย</p>
   </header>
 
-  <!-- Products -->
-  <main id="products" class="max-w-6xl mx-auto py-8 px-4 space-y-12">
+  <!-- Product Sections -->
+  <main class="p-6 space-y-10">
 
-    <!-- 🐛 Larva -->
+    <!-- หมวด 1: ด้วงกว่าง -->
     <section>
-      <h3 class="text-xl font-bold text-[var(--secondary)] mb-4">🐛 หนอน (Larva)</h3>
-      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <div onclick="openPopup('หนอนกว่างเฮอคิวริส','images/hercules-larva.jpg','L1-2: 500฿/ตัว, โปร 3 ตัว: 1300฿ ส่งฟรี, L3 รู้เพศ: คู่ละ 1200฿')" 
-          class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-4 cursor-pointer">
-          <img src="images/hercules-larva.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-          <h4 class="font-semibold text-lg text-[var(--secondary)]">หนอนกว่างเฮอคิวริส</h4>
-          <p class="text-gray-600 text-sm">L1-2, L3 รู้เพศ</p>
+      <h2 class="text-xl font-bold text-sky-700 mb-4">🪲 ด้วงกว่าง</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-white rounded-2xl shadow hover:shadow-lg transition p-3 text-center">
+          <img src="https://via.placeholder.com/200" class="mx-auto mb-3 rounded-xl">
+          <h3 class="text-base font-bold text-sky-600">ด้วง Hercules</h3>
+          <p class="text-gray-600 text-sm">แข็งแรง ดุดัน</p>
+          <button onclick="openModal('ด้วง Hercules','แข็งแรง ดุดัน','https://via.placeholder.com/400')" 
+            class="mt-3 bg-gradient-to-r from-sky-400 to-emerald-400 text-white px-4 py-1.5 rounded-full shadow">
+            ดูรายละเอียด
+          </button>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow hover:shadow-lg transition p-3 text-center">
+          <img src="https://via.placeholder.com/200" class="mx-auto mb-3 rounded-xl">
+          <h3 class="text-base font-bold text-sky-600">ด้วงคีมญี่ปุ่น</h3>
+          <p class="text-gray-600 text-sm">นิยมเลี้ยง</p>
+          <button onclick="openModal('ด้วงคีมญี่ปุ่น','นิยมเลี้ยง','https://via.placeholder.com/400')" 
+            class="mt-3 bg-gradient-to-r from-sky-400 to-emerald-400 text-white px-4 py-1.5 rounded-full shadow">
+            ดูรายละเอียด
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- 🪲 Adult -->
+    <!-- หมวด 2: หนอน/อาหาร -->
     <section>
-      <h3 class="text-xl font-bold text-[var(--secondary)] mb-4">🪲 ด้วงเต็มวัย (Adult)</h3>
-      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <div onclick="openPopup('กว่างชนไทย','images/adult-thai.jpg','ตัวเพาะ ขนาด 60+ 300฿/ตัว')" 
-          class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-4 cursor-pointer">
-          <img src="images/adult-thai.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-          <h4 class="font-semibold text-lg text-[var(--secondary)]">กว่างชนไทย</h4>
-          <p class="text-gray-600 text-sm">เพาะเลี้ยง 60+</p>
+      <h2 class="text-xl font-bold text-green-700 mb-4">🐛 หนอน / อาหารด้วง</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-white rounded-2xl shadow hover:shadow-lg transition p-3 text-center">
+          <img src="https://via.placeholder.com/200" class="mx-auto mb-3 rounded-xl">
+          <h3 class="text-base font-bold text-green-600">หนอนกว่าง</h3>
+          <p class="text-gray-600 text-sm">สำหรับเพาะเลี้ยง</p>
+          <button onclick="openModal('หนอนกว่าง','สำหรับเพาะเลี้ยง','https://via.placeholder.com/400')" 
+            class="mt-3 bg-gradient-to-r from-green-400 to-emerald-400 text-white px-4 py-1.5 rounded-full shadow">
+            ดูรายละเอียด
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- 🎁 Set -->
+    <!-- หมวด 3: อุปกรณ์ -->
     <section>
-      <h3 class="text-xl font-bold text-[var(--secondary)] mb-4">🎁 Set สุดคุ้ม</h3>
-      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <div onclick="openPopup('Set กว่างสามเขาคอเคซัส','images/set-caucasus.jpg','🔥1000฿ ส่งฟรี🔥\\n1. หนอน L3 คู่ ผู้-เมีย\\n2. กระปุก 2 ใบ\\n3. อาหาร 1 ถุง\\n4. ใบจดน้ำหนัก')" 
-          class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-4 cursor-pointer">
-          <img src="images/set-caucasus.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-          <h4 class="font-semibold text-lg text-[var(--secondary)]">Set กว่างสามเขาคอเคซัส</h4>
-          <p class="text-gray-600 text-sm">🔥1000฿ ส่งฟรี🔥</p>
+      <h2 class="text-xl font-bold text-purple-700 mb-4">🌱 อุปกรณ์เลี้ยง</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-white rounded-2xl shadow hover:shadow-lg transition p-3 text-center">
+          <img src="https://via.placeholder.com/200" class="mx-auto mb-3 rounded-xl">
+          <h3 class="text-base font-bold text-purple-600">กล่องเพาะด้วง</h3>
+          <p class="text-gray-600 text-sm">วัสดุทนทาน</p>
+          <button onclick="openModal('กล่องเพาะด้วง','วัสดุทนทาน','https://via.placeholder.com/400')" 
+            class="mt-3 bg-gradient-to-r from-purple-400 to-pink-400 text-white px-4 py-1.5 rounded-full shadow">
+            ดูรายละเอียด
+          </button>
         </div>
       </div>
     </section>
-
-    <!-- ⚙️ Accessories -->
-    <section>
-      <h3 class="text-xl font-bold text-[var(--secondary)] mb-4">⚙️ อุปกรณ์เลี้ยง (Accessories)</h3>
-      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <div onclick="openPopup('แท่นตัดเยลลี่','images/jelly-cutter.jpg','450฿/ชิ้น Made in Japan 🇯🇵 \\n- ตัดปีโป้ทรงยาว \\n- ใช้กับเยลลี่ขนาดใหญ่ได้ \\n- แบ่งครึ่งปีโป้')" 
-          class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-4 cursor-pointer">
-          <img src="images/jelly-cutter.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-          <h4 class="font-semibold text-lg text-[var(--secondary)]">แท่นตัดเยลลี่</h4>
-          <p class="text-gray-600 text-sm">450฿ / ชิ้น</p>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <!-- Popup -->
-  <div id="popup" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-    <div class="bg-white rounded-2xl max-w-md w-full shadow-2xl p-6 relative animate-fadeIn">
-      <button onclick="closePopup()" class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-full">✕</button>
-      <img id="popupImg" src="" class="w-full h-48 object-cover rounded-xl mb-4">
-      <h3 id="popupTitle" class="text-xl font-bold text-[var(--secondary)]"></h3>
-      <p id="popupDetail" class="text-gray-700 mt-2 whitespace-pre-line"></p>
-
-      <div class="mt-6 flex justify-end">
-        <a id="buyLink" target="_blank"
-           class="px-5 py-3 bg-[var(--primary)] hover:bg-[var(--secondary)] text-white rounded-xl shadow-md hover:shadow-lg transition font-medium">
-           🛒 สั่งซื้อผ่าน Messenger
-        </a>
-      </div>
+  <!-- Modal -->
+  <div id="productModal" class="fixed inset-0 hidden bg-black bg-opacity-40 flex items-center justify-center z-50">
+    <div class="bg-white rounded-3xl p-6 max-w-sm w-11/12 shadow-xl relative animate-fadeIn">
+      <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-500 hover:text-red-500 text-2xl">✖</button>
+      <img id="modalImage" src="" alt="สินค้า" class="w-full rounded-2xl mb-4">
+      <h2 id="modalTitle" class="text-xl font-bold text-sky-700 mb-2">ชื่อสินค้า</h2>
+      <p id="modalDetail" class="text-gray-700 mb-4">รายละเอียดสินค้า</p>
+      <a id="orderBtn" target="_blank"
+        class="flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-400 to-purple-500 hover:from-indigo-500 hover:to-purple-600 text-white px-5 py-3 rounded-full shadow-lg transition">
+        🛒 สั่งซื้อผ่าน Messenger
+      </a>
     </div>
   </div>
 
   <!-- Contact -->
-  <footer id="contact" class="bg-[var(--dark)] text-white py-8 mt-12">
-    <div class="max-w-6xl mx-auto text-center space-y-4">
-      <h3 class="text-lg font-bold text-[var(--primary)]">📲 ช่องทางการติดต่อ</h3>
-      <div class="flex justify-center gap-4 flex-wrap">
-        <a href="https://www.facebook.com/PhuBaoKhaiDuangBeetles" target="_blank" 
-           class="px-4 py-2 bg-blue-600 rounded-xl shadow hover:bg-blue-700 transition">Facebook</a>
-        <a href="https://youtube.com/@twinbeetle6472?si=m86eaFLw-w--HWwH" target="_blank" 
-           class="px-4 py-2 bg-red-600 rounded-xl shadow hover:bg-red-700 transition">YouTube</a>
-        <a href="https://www.tiktok.com/@twinbeetle" target="_blank" 
-           class="px-4 py-2 bg-pink-500 rounded-xl shadow hover:bg-pink-600 transition">TikTok</a>
-      </div>
+  <footer class="bg-white mt-10 p-6 text-center rounded-t-3xl shadow-inner">
+    <h3 class="text-lg font-bold text-sky-700 mb-3">📌 ช่องทางการติดต่อ</h3>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="https://www.facebook.com/PhuBaoKhaiDuangBeetles" target="_blank" 
+         class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full shadow">Facebook</a>
+      <a href="https://youtube.com/@twinbeetle6472?si=m86eaFLw-w--HWwH" target="_blank" 
+         class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full shadow">YouTube</a>
+      <a href="https://www.tiktok.com/@twinbeetle" target="_blank" 
+         class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-full shadow">TikTok</a>
     </div>
+    <p class="text-gray-500 text-sm mt-4">© 2025 ผู้บ่าวขายด้วง</p>
   </footer>
 
+  <!-- Script -->
   <script>
-    function openPopup(title, img, detail) {
-      document.getElementById("popupTitle").innerText = title;
-      document.getElementById("popupDetail").innerText = detail;
-      document.getElementById("popupImg").src = img;
-
-      const pageUsername = "PhuBaoKhaiDuangBeetles";  
-      const message = encodeURIComponent(`ผมสนใจสั่งซื้อ ${title} - ${detail}`);
-      document.getElementById("buyLink").href = `https://m.me/${pageUsername}?text=${message}`;
-
-      document.getElementById("popup").classList.remove("hidden");
+    function openModal(productName, detail, imgUrl) {
+      document.getElementById("modalTitle").innerText = productName;
+      document.getElementById("modalDetail").innerText = detail;
+      document.getElementById("modalImage").src = imgUrl;
+      const pageName = "PhuBaoKhaiDuangBeetles"; 
+      const msg = encodeURIComponent("สนใจสั่งซื้อ: " + productName);
+      document.getElementById("orderBtn").href = "https://m.me/" + pageName + "?text=" + msg;
+      document.getElementById("productModal").classList.remove("hidden");
     }
-
-    function closePopup() {
-      document.getElementById("popup").classList.add("hidden");
+    function closeModal() {
+      document.getElementById("productModal").classList.add("hidden");
     }
   </script>
+
+  <style>
+    @keyframes fadeIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .animate-fadeIn { animation: fadeIn 0.3s ease-out; }
+  </style>
 
 </body>
 </html>
