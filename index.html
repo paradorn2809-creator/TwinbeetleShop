@@ -3,172 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ร้านขายด้วง TwinBeetle</title>
+  <title>TwinBeetle Shop - ผู้บ่าวขายด้วง</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* แอนิเมชัน Slide-up Popup */
-    @keyframes slideUp {
-      0% { transform: translateY(100%); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
-    }
-    .animate-slideUp {
-      animation: slideUp 0.3s ease-out;
-    }
-  </style>
 </head>
-<body class="bg-green-50">
+<body class="bg-gradient-to-b from-green-50 to-green-100 font-sans">
 
   <!-- Header -->
-  <header class="bg-green-600 text-white shadow-md">
+  <header class="bg-green-600 text-white shadow-lg sticky top-0 z-50">
     <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
       <h1 class="text-2xl font-bold">🪲 TwinBeetle Shop</h1>
-      <nav class="space-x-4">
-        <a href="#" class="hover:text-yellow-300">หน้าแรก</a>
+      <nav class="space-x-4 text-sm font-medium">
         <a href="#products" class="hover:text-yellow-300">สินค้า</a>
         <a href="#contact" class="hover:text-yellow-300">ติดต่อ</a>
       </nav>
     </div>
   </header>
 
-  <!-- Main -->
-  <main id="products" class="max-w-6xl mx-auto py-10 px-4 space-y-12">
-    
-    <!-- 🐛 หนอน -->
-    <section>
-      <h3 class="text-2xl font-bold text-green-700 mb-6">🐛 หนอน (Larva)</h3>
-      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <div onclick="openPopup(
-          'หนอนกว่างเฮอคิวริส',
-          'L1-2: 500฿/ตัว<br>โปร 3 ตัว: 1300฿ ส่งฟรี<br>L3 คู่ละ 1200฿',
-          'images/hercules-larva.jpg')"
-          class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
-          <img src="images/hercules-larva.jpg" alt="หนอนกว่างเฮอคิวริส"
-            class="w-full h-40 object-cover rounded-lg mb-3">
-          <h4 class="font-semibold text-lg text-green-700">หนอนกว่างเฮอคิวริส</h4>
-          <p class="text-gray-600 text-sm">L1-2: 500฿/ตัว<br>โปร 3 ตัว: 1300฿ ส่งฟรี<br>L3 คู่ละ 1200฿</p>
-        </div>
+  <!-- Products -->
+  <main id="products" class="max-w-6xl mx-auto py-8 px-4 space-y-12">
 
-        <div onclick="openPopup(
-          'หนอนกว่างช้างเผือก',
-          'L3: คู่ละ 1500฿',
-          'images/white-elephant.jpg')"
-          class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
-          <img src="images/white-elephant.jpg" alt="หนอนกว่างช้างเผือก"
-            class="w-full h-40 object-cover rounded-lg mb-3">
-          <h4 class="font-semibold text-lg text-green-700">หนอนกว่างช้างเผือก</h4>
-          <p class="text-gray-600 text-sm">L3: คู่ละ 1500฿</p>
+    <!-- 🐛 Larva -->
+    <section>
+      <h3 class="text-xl font-bold text-green-700 mb-4">🐛 หนอน (Larva)</h3>
+      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div onclick="openPopup('หนอนกว่างเฮอคิวริส','images/hercules-larva.jpg','L1-2: 500฿/ตัว, โปร 3 ตัว: 1300฿ ส่งฟรี, L3 รู้เพศ: คู่ละ 1200฿')" 
+          class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-4 cursor-pointer">
+          <img src="images/hercules-larva.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
+          <h4 class="font-semibold text-lg text-green-700">หนอนกว่างเฮอคิวริส</h4>
+          <p class="text-gray-600 text-sm">L1-2, L3 รู้เพศ</p>
         </div>
       </div>
     </section>
 
-    <!-- 🪲 เต็มวัย -->
+    <!-- 🪲 Adult -->
     <section>
-      <h3 class="text-2xl font-bold text-green-700 mb-6">🪲 เต็มวัย (Beetles)</h3>
+      <h3 class="text-xl font-bold text-green-700 mb-4">🪲 ด้วงเต็มวัย (Adult)</h3>
       <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <div onclick="openPopup(
-          'กว่างชนไทยตัวเพาะ',
-          'ขนาด 60+ ราคา 300฿/ตัว',
-          'images/thai-rhino.jpg')"
-          class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
-          <img src="images/thai-rhino.jpg" alt="กว่างชนไทยตัวเพาะ"
-            class="w-full h-40 object-cover rounded-lg mb-3">
-          <h4 class="font-semibold text-lg text-green-700">กว่างชนไทยตัวเพาะ</h4>
-          <p class="text-gray-600 text-sm">60+ 300฿/ตัว</p>
-        </div>
-
-        <div onclick="openPopup(
-          'ด้วงคีมจีน (Dorcus titanus)',
-          'ด้วงคีมขนาดกลาง เพาะเลี้ยงง่าย<br>ผู้ 60mm+ ราคา 800฿/ตัว<br>เมีย 35mm+ ราคา 500฿/ตัว<br>คู่ละ 1,200฿',
-          'images/dorcus-titanus.jpg')"
-          class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
-          <img src="images/dorcus-titanus.jpg" alt="ด้วงคีมจีน"
-            class="w-full h-40 object-cover rounded-lg mb-3">
-          <h4 class="font-semibold text-lg text-green-700">ด้วงคีมจีน</h4>
-          <p class="text-gray-600 text-sm">คู่ละ 1,200฿</p>
-        </div>
-
-        <div onclick="openPopup(
-          'ด้วงคีมยีราฟ (Prosopocoilus giraffa)',
-          'ด้วงคีมขนาดใหญ่ที่สุดในโลก<br>ผู้ 100mm+ ราคา 2,500฿/ตัว<br>เมีย 50mm+ ราคา 1,200฿/ตัว<br>คู่ละ 3,500฿',
-          'images/giraffa.jpg')"
-          class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
-          <img src="images/giraffa.jpg" alt="ด้วงคีมยีราฟ"
-            class="w-full h-40 object-cover rounded-lg mb-3">
-          <h4 class="font-semibold text-lg text-green-700">ด้วงคีมยีราฟ</h4>
-          <p class="text-gray-600 text-sm">คู่ละ 3,500฿</p>
+        <div onclick="openPopup('กว่างชนไทย','images/adult-thai.jpg','ตัวเพาะ ขนาด 60+ 300฿/ตัว')" 
+          class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-4 cursor-pointer">
+          <img src="images/adult-thai.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
+          <h4 class="font-semibold text-lg text-green-700">กว่างชนไทย</h4>
+          <p class="text-gray-600 text-sm">เพาะเลี้ยง 60+</p>
         </div>
       </div>
     </section>
 
     <!-- 🎁 Set -->
     <section>
-      <h3 class="text-2xl font-bold text-green-700 mb-6">🎁 Set สุดคุ้ม</h3>
+      <h3 class="text-xl font-bold text-green-700 mb-4">🎁 Set สุดคุ้ม</h3>
       <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <div onclick="openPopup(
-          'Set เลี้ยงตัวอ่อนด้วงกว่างสามเขาคอเคซัส',
-          '🔥1000฿ ส่งฟรี🔥<br>ในชุดประกอบด้วย:<br>1. หนอน ระยะ L3 1 คู่ ผู้เมีย<br>2. กระปุก 2 ใบ<br>3. อาหารตัวอ่อน 1 ถุง<br>4. ใบจดน้ำหนัก 1 ใบ',
-          'images/caucasus-set.jpg')"
-          class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
-          <img src="images/caucasus-set.jpg" alt="Set เลี้ยงสามเขาคอเคซัส"
-            class="w-full h-40 object-cover rounded-lg mb-3">
-          <h4 class="font-semibold text-lg text-green-700">Set สามเขาคอเคซัส</h4>
+        <div onclick="openPopup('Set กว่างสามเขาคอเคซัส','images/set-caucasus.jpg','🔥1000฿ ส่งฟรี🔥\\n1. หนอน L3 คู่ ผู้-เมีย\\n2. กระปุก 2 ใบ\\n3. อาหาร 1 ถุง\\n4. ใบจดน้ำหนัก')" 
+          class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-4 cursor-pointer">
+          <img src="images/set-caucasus.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
+          <h4 class="font-semibold text-lg text-green-700">Set กว่างสามเขาคอเคซัส</h4>
           <p class="text-gray-600 text-sm">🔥1000฿ ส่งฟรี🔥</p>
         </div>
       </div>
     </section>
 
-    <!-- 🔧 อุปกรณ์ -->
+    <!-- ⚙️ Accessories -->
     <section>
-      <h3 class="text-2xl font-bold text-green-700 mb-6">🔧 อุปกรณ์การเลี้ยง</h3>
+      <h3 class="text-xl font-bold text-green-700 mb-4">⚙️ อุปกรณ์เลี้ยง (Accessories)</h3>
       <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <div onclick="openPopup(
-          'แท่นตัดเยลลี่',
-          '450฿/ชิ้น made in Japan 🇯🇵<br>- ตัดปีโป้/เยลลี่<br>- ตัดแบ่งครึ่งได้พอดี',
-          'images/jelly-cutter.jpg')"
-          class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
-          <img src="images/jelly-cutter.jpg" alt="แท่นตัดเยลลี่"
-            class="w-full h-40 object-cover rounded-lg mb-3">
+        <div onclick="openPopup('แท่นตัดเยลลี่','images/jelly-cutter.jpg','450฿/ชิ้น Made in Japan 🇯🇵 \\n- ตัดปีโป้ทรงยาว \\n- ใช้กับเยลลี่ขนาดใหญ่ได้ \\n- แบ่งครึ่งปีโป้')" 
+          class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-4 cursor-pointer">
+          <img src="images/jelly-cutter.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
           <h4 class="font-semibold text-lg text-green-700">แท่นตัดเยลลี่</h4>
           <p class="text-gray-600 text-sm">450฿ / ชิ้น</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 🍂 อาหาร -->
-    <section>
-      <h3 class="text-2xl font-bold text-green-700 mb-6">🍂 อาหารตัวอ่อน</h3>
-      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <div onclick="openPopup(
-          'Dmat pro',
-          '180฿/ถุง (5 ลิตร)<br>เหมาะกับกว่างใหญ่ เช่น สามเขา, เฮอคิวริส',
-          'images/dmat-pro.jpg')"
-          class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
-          <img src="images/dmat-pro.jpg" alt="Dmat pro"
-            class="w-full h-40 object-cover rounded-lg mb-3">
-          <h4 class="font-semibold text-lg text-green-700">Dmat pro</h4>
-          <p class="text-gray-600 text-sm">180฿ / ถุง</p>
-        </div>
-
-        <div onclick="openPopup(
-          'Dmat natural',
-          '160฿/ถุง (9 ลิตร)<br>เหมาะกับกว่างทั่วไป เช่น กว่างชน, คาบูโตะ',
-          'images/dmat-natural.jpg')"
-          class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
-          <img src="images/dmat-natural.jpg" alt="Dmat natural"
-            class="w-full h-40 object-cover rounded-lg mb-3">
-          <h4 class="font-semibold text-lg text-green-700">Dmat natural</h4>
-          <p class="text-gray-600 text-sm">160฿ / ถุง</p>
-        </div>
-
-        <div onclick="openPopup(
-          'Elmat & Lmat',
-          '180฿/ถุง<br>สำหรับด้วงคีม',
-          'images/elmat-lmat.jpg')"
-          class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
-          <img src="images/elmat-lmat.jpg" alt="Elmat Lmat"
-            class="w-full h-40 object-cover rounded-lg mb-3">
-          <h4 class="font-semibold text-lg text-green-700">Elmat & Lmat</h4>
-          <p class="text-gray-600 text-sm">180฿ / ถุง</p>
         </div>
       </div>
     </section>
@@ -176,47 +77,45 @@
   </main>
 
   <!-- Popup -->
-  <div id="popup" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-end justify-center z-50">
-    <div class="bg-white rounded-t-3xl w-full max-w-md shadow-2xl animate-slideUp">
-      
-      <!-- ปุ่มปิด -->
-      <button onclick="closePopup()" 
-        class="absolute top-2 right-4 text-gray-400 hover:text-red-500 text-2xl font-bold z-50">
-        &times;
-      </button>
+  <div id="popup" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white rounded-2xl max-w-md w-full shadow-2xl p-6 relative animate-fadeIn">
+      <button onclick="closePopup()" class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-full">✕</button>
+      <img id="popupImg" src="" class="w-full h-48 object-cover rounded-xl mb-4">
+      <h3 id="popupTitle" class="text-xl font-bold text-green-700"></h3>
+      <p id="popupDetail" class="text-gray-700 mt-2 whitespace-pre-line"></p>
 
-      <!-- เนื้อหา -->
-      <div class="p-6">
-        <img id="popupImage" src="" alt="product"
-          class="w-full h-56 object-cover rounded-xl shadow mb-4">
-
-        <h3 id="popupTitle" class="text-2xl font-bold text-green-700 text-center"></h3>
-        <p id="popupDetail" class="text-gray-700 mt-3 text-center leading-relaxed"></p>
-
-        <!-- ปุ่มสั่งซื้อ -->
-        <div class="mt-6">
-          <a id="buyLink" target="_blank"
-            class="w-full block text-center px-6 py-4 rounded-xl text-white font-semibold text-lg
-                   bg-gradient-to-r from-green-500 to-emerald-600
-                   hover:from-green-600 hover:to-emerald-700
-                   shadow-lg transition transform hover:-translate-y-1 hover:shadow-xl">
-            🛒 สั่งซื้อผ่าน Messenger
-          </a>
-        </div>
+      <div class="mt-6 flex justify-end">
+        <a id="buyLink" target="_blank"
+           class="px-5 py-3 bg-gradient-to-r from-green-500 to-green-700 text-white rounded-xl shadow-md hover:shadow-lg transition font-medium">
+           🛒 สั่งซื้อผ่าน Messenger
+        </a>
       </div>
     </div>
   </div>
 
+  <!-- Contact -->
+  <footer id="contact" class="bg-green-700 text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto text-center space-y-4">
+      <h3 class="text-lg font-bold">📲 ช่องทางการติดต่อ</h3>
+      <div class="flex justify-center gap-4 flex-wrap">
+        <a href="https://www.facebook.com/PhuBaoKhaiDuangBeetles" target="_blank" 
+           class="px-4 py-2 bg-blue-600 rounded-xl shadow hover:bg-blue-700 transition">Facebook</a>
+        <a href="https://youtube.com/@twinbeetle6472?si=m86eaFLw-w--HWwH" target="_blank" 
+           class="px-4 py-2 bg-red-600 rounded-xl shadow hover:bg-red-700 transition">YouTube</a>
+        <a href="https://www.tiktok.com/@twinbeetle" target="_blank" 
+           class="px-4 py-2 bg-pink-500 rounded-xl shadow hover:bg-pink-600 transition">TikTok</a>
+      </div>
+    </div>
+  </footer>
+
   <script>
-    function openPopup(title, detail, img) {
-      document.getElementById("popupTitle").innerHTML = title;
-      document.getElementById("popupDetail").innerHTML = detail;
-      document.getElementById("popupImage").src = img;
+    function openPopup(title, img, detail) {
+      document.getElementById("popupTitle").innerText = title;
+      document.getElementById("popupDetail").innerText = detail;
+      document.getElementById("popupImg").src = img;
 
-      const cleanDetail = detail.replace(/<br>/g, "\n");
-      const message = encodeURIComponent(`ผมสนใจสั่งซื้อ ${title} - ${cleanDetail}`);
-
-      const pageUsername = "PhuBaoKhaiDuangBeetles";
+      const pageUsername = "PhuBaoKhaiDuangBeetles";  
+      const message = encodeURIComponent(`ผมสนใจสั่งซื้อ ${title} - ${detail}`);
       document.getElementById("buyLink").href = `https://m.me/${pageUsername}?text=${message}`;
 
       document.getElementById("popup").classList.remove("hidden");
