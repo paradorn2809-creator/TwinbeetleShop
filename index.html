@@ -5,16 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TwinBeetle Shop - ผู้บ่าวขายด้วง</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary: #d8ab4e;
+      --secondary: #b48c36;
+      --dark: #040404;
+    }
+  </style>
 </head>
-<body class="bg-gradient-to-b from-green-50 to-green-100 font-sans">
+<body class="bg-gradient-to-b from-yellow-50 to-yellow-100 font-sans text-[var(--dark)]">
 
   <!-- Header -->
-  <header class="bg-green-600 text-white shadow-lg sticky top-0 z-50">
+  <header class="bg-[var(--primary)] text-white shadow-lg sticky top-0 z-50">
     <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
       <h1 class="text-2xl font-bold">🪲 TwinBeetle Shop</h1>
       <nav class="space-x-4 text-sm font-medium">
-        <a href="#products" class="hover:text-yellow-300">สินค้า</a>
-        <a href="#contact" class="hover:text-yellow-300">ติดต่อ</a>
+        <a href="#products" class="hover:text-[var(--dark)]">สินค้า</a>
+        <a href="#contact" class="hover:text-[var(--dark)]">ติดต่อ</a>
       </nav>
     </div>
   </header>
@@ -24,12 +31,12 @@
 
     <!-- 🐛 Larva -->
     <section>
-      <h3 class="text-xl font-bold text-green-700 mb-4">🐛 หนอน (Larva)</h3>
+      <h3 class="text-xl font-bold text-[var(--secondary)] mb-4">🐛 หนอน (Larva)</h3>
       <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <div onclick="openPopup('หนอนกว่างเฮอคิวริส','images/hercules-larva.jpg','L1-2: 500฿/ตัว, โปร 3 ตัว: 1300฿ ส่งฟรี, L3 รู้เพศ: คู่ละ 1200฿')" 
           class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-4 cursor-pointer">
           <img src="images/hercules-larva.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-          <h4 class="font-semibold text-lg text-green-700">หนอนกว่างเฮอคิวริส</h4>
+          <h4 class="font-semibold text-lg text-[var(--secondary)]">หนอนกว่างเฮอคิวริส</h4>
           <p class="text-gray-600 text-sm">L1-2, L3 รู้เพศ</p>
         </div>
       </div>
@@ -37,12 +44,12 @@
 
     <!-- 🪲 Adult -->
     <section>
-      <h3 class="text-xl font-bold text-green-700 mb-4">🪲 ด้วงเต็มวัย (Adult)</h3>
+      <h3 class="text-xl font-bold text-[var(--secondary)] mb-4">🪲 ด้วงเต็มวัย (Adult)</h3>
       <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <div onclick="openPopup('กว่างชนไทย','images/adult-thai.jpg','ตัวเพาะ ขนาด 60+ 300฿/ตัว')" 
           class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-4 cursor-pointer">
           <img src="images/adult-thai.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-          <h4 class="font-semibold text-lg text-green-700">กว่างชนไทย</h4>
+          <h4 class="font-semibold text-lg text-[var(--secondary)]">กว่างชนไทย</h4>
           <p class="text-gray-600 text-sm">เพาะเลี้ยง 60+</p>
         </div>
       </div>
@@ -50,12 +57,12 @@
 
     <!-- 🎁 Set -->
     <section>
-      <h3 class="text-xl font-bold text-green-700 mb-4">🎁 Set สุดคุ้ม</h3>
+      <h3 class="text-xl font-bold text-[var(--secondary)] mb-4">🎁 Set สุดคุ้ม</h3>
       <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <div onclick="openPopup('Set กว่างสามเขาคอเคซัส','images/set-caucasus.jpg','🔥1000฿ ส่งฟรี🔥\\n1. หนอน L3 คู่ ผู้-เมีย\\n2. กระปุก 2 ใบ\\n3. อาหาร 1 ถุง\\n4. ใบจดน้ำหนัก')" 
           class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-4 cursor-pointer">
           <img src="images/set-caucasus.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-          <h4 class="font-semibold text-lg text-green-700">Set กว่างสามเขาคอเคซัส</h4>
+          <h4 class="font-semibold text-lg text-[var(--secondary)]">Set กว่างสามเขาคอเคซัส</h4>
           <p class="text-gray-600 text-sm">🔥1000฿ ส่งฟรี🔥</p>
         </div>
       </div>
@@ -63,12 +70,12 @@
 
     <!-- ⚙️ Accessories -->
     <section>
-      <h3 class="text-xl font-bold text-green-700 mb-4">⚙️ อุปกรณ์เลี้ยง (Accessories)</h3>
+      <h3 class="text-xl font-bold text-[var(--secondary)] mb-4">⚙️ อุปกรณ์เลี้ยง (Accessories)</h3>
       <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <div onclick="openPopup('แท่นตัดเยลลี่','images/jelly-cutter.jpg','450฿/ชิ้น Made in Japan 🇯🇵 \\n- ตัดปีโป้ทรงยาว \\n- ใช้กับเยลลี่ขนาดใหญ่ได้ \\n- แบ่งครึ่งปีโป้')" 
           class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-4 cursor-pointer">
           <img src="images/jelly-cutter.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-          <h4 class="font-semibold text-lg text-green-700">แท่นตัดเยลลี่</h4>
+          <h4 class="font-semibold text-lg text-[var(--secondary)]">แท่นตัดเยลลี่</h4>
           <p class="text-gray-600 text-sm">450฿ / ชิ้น</p>
         </div>
       </div>
@@ -81,12 +88,12 @@
     <div class="bg-white rounded-2xl max-w-md w-full shadow-2xl p-6 relative animate-fadeIn">
       <button onclick="closePopup()" class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-full">✕</button>
       <img id="popupImg" src="" class="w-full h-48 object-cover rounded-xl mb-4">
-      <h3 id="popupTitle" class="text-xl font-bold text-green-700"></h3>
+      <h3 id="popupTitle" class="text-xl font-bold text-[var(--secondary)]"></h3>
       <p id="popupDetail" class="text-gray-700 mt-2 whitespace-pre-line"></p>
 
       <div class="mt-6 flex justify-end">
         <a id="buyLink" target="_blank"
-           class="px-5 py-3 bg-gradient-to-r from-green-500 to-green-700 text-white rounded-xl shadow-md hover:shadow-lg transition font-medium">
+           class="px-5 py-3 bg-[var(--primary)] hover:bg-[var(--secondary)] text-white rounded-xl shadow-md hover:shadow-lg transition font-medium">
            🛒 สั่งซื้อผ่าน Messenger
         </a>
       </div>
@@ -94,9 +101,9 @@
   </div>
 
   <!-- Contact -->
-  <footer id="contact" class="bg-green-700 text-white py-8 mt-12">
+  <footer id="contact" class="bg-[var(--dark)] text-white py-8 mt-12">
     <div class="max-w-6xl mx-auto text-center space-y-4">
-      <h3 class="text-lg font-bold">📲 ช่องทางการติดต่อ</h3>
+      <h3 class="text-lg font-bold text-[var(--primary)]">📲 ช่องทางการติดต่อ</h3>
       <div class="flex justify-center gap-4 flex-wrap">
         <a href="https://www.facebook.com/PhuBaoKhaiDuangBeetles" target="_blank" 
            class="px-4 py-2 bg-blue-600 rounded-xl shadow hover:bg-blue-700 transition">Facebook</a>
