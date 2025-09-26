@@ -224,33 +224,27 @@
 
 
 <!-- ================= MODALS ================= -->
-<!-- Modal: ตัวอ่อน Hercules -->
 <div class="modal fade" id="larva1" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content text-center p-3">
 
-      <!-- Carousel -->
       <div id="carouselLarva1" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
 
-          <!-- รูปที่ 1: ไซส์เล็ก -->
           <div class="carousel-item active" data-msg="สนใจ ตัวอ่อน Hercules ไซส์เล็ก 1 ตัว">
             <img src="images/hercules-larva.jpg" class="d-block w-100 rounded" alt="Hercules Larva Small">
           </div>
 
-          <!-- รูปที่ 2: ไซส์กลาง -->
           <div class="carousel-item" data-msg="สนใจ ตัวอ่อน Hercules ไซส์กลาง 1 ตัว">
             <img src="images/kabuto-red-pink.jpg" class="d-block w-100 rounded" alt="Hercules Larva Medium">
           </div>
 
-          <!-- รูปที่ 3: ไซส์ใหญ่ -->
           <div class="carousel-item" data-msg="สนใจ ตัวอ่อน Hercules ไซส์ใหญ่ 1 ตัว">
             <img src="images/kabuto-red.jpg" class="d-block w-100 rounded" alt="Hercules Larva Large">
           </div>
 
         </div>
 
-        <!-- ปุ่มเลื่อน -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselLarva1" data-bs-slide="prev">
           <span class="carousel-control-prev-icon"></span>
         </button>
@@ -259,17 +253,19 @@
         </button>
       </div>
 
-      <!-- รายละเอียดสินค้า -->
       <h4 class="mt-3 text-success">ตัวอ่อน Hercules</h4>
       <p>ราคา 500 บาท/ตัว</p>
-      <a id="buyBtnLarva1" href="#" target="_blank" class="btn-buy w-100">
+      
+      <a id="buyBtnLarva1" 
+         href="https://m.me/PhuBaoKhaiDuangBeetles?text=%E0%B8%AA%E0%B8%99%E0%B9%83%E0%B8%88%20%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%AD%E0%B9%88%E0%B8%AD%E0%B8%99%20Hercules%20%E0%B9%84%E0%B8%8B%E0%B8%AA%E0%B9%8C%E0%B9%80%E0%B8%A5%E0%B9%87%E0%B8%81%201%20%E0%B8%95%E0%B8%B1%E0%B8%A7" 
+         target="_blank" 
+         class="btn-buy w-100">
         สั่งซื้อผ่าน Messenger
       </a>
     </div>
   </div>
 </div>
 
-<!-- Script -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const carousel = document.getElementById("carouselLarva1");
@@ -278,17 +274,18 @@
     function updateMessengerLink() {
       const activeItem = carousel.querySelector(".carousel-item.active");
       const msg = activeItem.getAttribute("data-msg");
+      
+      // อัปเดตลิงก์ด้วยข้อความใหม่ที่เข้ารหัสแล้ว
       buyBtn.href = "https://m.me/PhuBaoKhaiDuangBeetles?text=" + encodeURIComponent(msg);
     }
 
-    // โหลดครั้งแรก
+    // โหลดครั้งแรก: เรียกใช้เพื่อยืนยันว่าลิงก์ถูกตั้งค่าตามรูปแรกแล้ว (แม้จะตั้งใน HTML แล้วก็ตาม)
     updateMessengerLink();
 
-    // อัปเดตทุกครั้งที่เลื่อนรูป
+    // อัปเดตทุกครั้งที่เลื่อนรูป: การทำงานนี้จะเปลี่ยนลิงก์ตามรูปภาพที่เลือกใหม่
     carousel.addEventListener("slid.bs.carousel", updateMessengerLink);
   });
 </script>
-
 
   
 <!-- Modal Set -->
@@ -370,6 +367,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
 
