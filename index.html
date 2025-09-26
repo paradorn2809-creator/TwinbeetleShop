@@ -1,4 +1,4 @@
-<!doctype html>
+อ<!doctype html>
 <html lang="th">
 <head>
   <meta charset="utf-8">
@@ -80,6 +80,18 @@
   </div>
 </nav>
 
+  <div class="bg-light py-2 sticky-top shadow-sm">
+  <div class="container text-center">
+    <div class="d-flex flex-wrap justify-content-center gap-2">
+      <a href="#larva-section" class="btn btn-sm btn-success">🐛 ตัวอ่อน</a>
+      <a href="#adult-section" class="btn btn-sm btn-success">🐞 เต็มวัย</a>
+      <a href="#set-section" class="btn btn-sm btn-warning">🔥 Set สุดคุ้ม</a>
+      <a href="#acc-section" class="btn btn-sm btn-primary">🛠️ อุปกรณ์การเลี้ยง</a>
+      <a href="#food-section" class="btn btn-sm btn-info">🍄 อาหารตัวอ่อน</a>
+    </div>
+  </div>
+</div>
+
 <!-- Hero -->
 <header class="text-center">
   <h1 class="fw-bold">TwinBeetle Store</h1>
@@ -135,8 +147,9 @@
 
 
   <!-- ========== หมวด ตัวอ่อน ========== -->
-  <h3 class="section-title">🐛 ตัวอ่อน</h3>
-  <div class="row g-4">
+ <h3 id="larva-section" class="section-title">🐛 ตัวอ่อน</h3>
+<div class="row g-4">
+    
     <!-- สินค้า 1 -->
     <div class="col-md-4">
       <div class="card product-card" data-bs-toggle="modal" data-bs-target="#larva1">
@@ -266,8 +279,8 @@
   </div>
 
   <!-- ========== หมวด เต็มวัย ========== -->
-  <h3 class="section-title">🐞 เต็มวัย</h3>
-  <div class="row g-4">
+  <h3 id="adult-section" class="section-title">🐞 เต็มวัย</h3>
+<div class="row g-4">
     <div class="col-md-4">
       <div class="card product-card" data-bs-toggle="modal" data-bs-target="#adult1">
         <img src="https://via.placeholder.com/400x250?text=กว่างชนไทย" class="card-img-top">
@@ -280,7 +293,7 @@
   </div>
 
   <!-- ========== หมวด Set สุดคุ้ม ========== -->
-  <h3 class="section-title">🔥 Set สุดคุ้ม</h3>
+  <h3 id="set-section" class="section-title">🔥 Set สุดคุ้ม</h3>
   <div class="row g-4">
     <div class="col-md-4">
       <div class="card product-card" data-bs-toggle="modal" data-bs-target="#set1">
@@ -294,7 +307,7 @@
   </div>
 
   <!-- ========== หมวด อุปกรณ์การเลี้ยง ========== -->
-  <h3 class="section-title">🛠️ อุปกรณ์การเลี้ยง</h3>
+  <h3 id="acc-section" class="section-title">🛠️ อุปกรณ์การเลี้ยง</h3>
   <div class="row g-4">
     <div class="col-md-4">
       <div class="card product-card" data-bs-toggle="modal" data-bs-target="#acc1">
@@ -309,7 +322,7 @@
 </div>
 
 <!-- 🐛 อาหารตัวอ่อน / Mat for larva -->
-<section id="food" class="py-5">
+<h3 id="food-section" class="section-title">🍄 อาหารตัวอ่อน</h3>
   <div class="container">
     <h2 class="text-center text-success mb-5">อาหารตัวอ่อน / Mat for larva 🐛</h2>
     <div class="row g-4">
@@ -531,6 +544,7 @@ function sendChoice(groupName) {
 </script>
 </body>
 </html>
+
 
 
 
