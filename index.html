@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ผู้บ่าวขายด้วง | TwinBeetle</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
@@ -70,12 +72,14 @@
 </head>
 <body>
 
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg">
   <div class="container">
     <a class="navbar-brand" href="#">ผู้บ่าวขายด้วง</a>
   </div>
 </nav>
 
+<!-- Hero -->
 <header class="text-center">
   <h1 class="fw-bold">TwinBeetle Store</h1>
   <p class="text-muted">ร้านขายด้วงครบวงจร — มั่นใจคุณภาพ พร้อมส่งทั่วไทย</p>
@@ -87,9 +91,11 @@
       
     </div>
   
-     <h3 class="section-title">🐛 ตัวอ่อน</h3>
+   <!-- ========== หมวด ตัวอ่อน ========== -->
+  <h3 class="section-title">🐛 ตัวอ่อน</h3>
   <div class="row g-4">
-   <div class="col-md-4">
+  <!-- สินค้า 1 -->
+ <div class="col-md-4">
     <div class="card product-card" data-bs-toggle="modal" data-bs-target="#larva1">
      <img src="images/hercules-larva.jpg" class="card-img-top" alt="ตัวอ่อน hercules">
       <div class="card-body text-center">
@@ -102,7 +108,8 @@
  
 
     
-    <div class="col-md-4">
+  <!-- สินค้า 2 -->
+  <div class="col-md-4">
     <div class="card product-card" data-bs-toggle="modal" data-bs-target="#larva2">
       <img src="https://via.placeholder.com/400x250?text=ตัวอ่อน+3+เขาคอเคซัส" class="card-img-top">
       <div class="card-body text-center">
@@ -112,7 +119,8 @@
     </div>
   </div>
     
-   <div class="col-md-4">
+ <!-- สินค้า 3 -->
+  <div class="col-md-4">
     <div class="card product-card" data-bs-toggle="modal" data-bs-target="#larva3">
       <img src="https://via.placeholder.com/400x250?text=ตัวอ่อน+5+เขา" class="card-img-top">
       <div class="card-body text-center">
@@ -129,7 +137,8 @@
 
 
 
-    <h3 class="section-title">🐞 เต็มวัย</h3>
+  <!-- ========== หมวด เต็มวัย ========== -->
+  <h3 class="section-title">🐞 เต็มวัย</h3>
   <div class="row g-4">
     <div class="col-md-4">
       <div class="card product-card" data-bs-toggle="modal" data-bs-target="#adult1">
@@ -142,7 +151,8 @@
     </div>
   </div>
 
-    <h3 class="section-title">🔥 Set สุดคุ้ม</h3>
+  <!-- ========== หมวด Set สุดคุ้ม ========== -->
+  <h3 class="section-title">🔥 Set สุดคุ้ม</h3>
   <div class="row g-4">
     <div class="col-md-4">
       <div class="card product-card" data-bs-toggle="modal" data-bs-target="#set1">
@@ -152,10 +162,11 @@
           <p class="text-muted">1000 บาท ส่งฟรี</p>
         </div>
       </div>
-      </div>
+    </div>
   </div>
 
-    <h3 class="section-title">🛠️ อุปกรณ์การเลี้ยง</h3>
+  <!-- ========== หมวด อุปกรณ์การเลี้ยง ========== -->
+  <h3 class="section-title">🛠️ อุปกรณ์การเลี้ยง</h3>
   <div class="row g-4">
     <div class="col-md-4">
       <div class="card product-card" data-bs-toggle="modal" data-bs-target="#acc1">
@@ -168,12 +179,14 @@
     </div>
   </div>
 
+<!-- 🐛 อาหารตัวอ่อน / Mat for larva -->
 <section id="food" class="py-5">
   <div class="container">
     <h2 class="text-center text-success mb-5">อาหารตัวอ่อน / Mat for larva 🐛</h2>
     <div class="row g-4">
 
-            <div class="col-md-4">
+      <!-- Dmat Pro -->
+      <div class="col-md-4">
         <div class="card product-card" data-bs-toggle="modal" data-bs-target="#food1">
           <img src="https://via.placeholder.com/400x250?text=Dmat+Pro" class="card-img-top">
           <div class="card-body text-center">
@@ -183,7 +196,8 @@
         </div>
       </div>
 
-            <div class="col-md-4">
+      <!-- Dmat Natural -->
+      <div class="col-md-4">
         <div class="card product-card" data-bs-toggle="modal" data-bs-target="#food2">
           <img src="https://via.placeholder.com/400x250?text=Dmat+Natural" class="card-img-top">
           <div class="card-body text-center">
@@ -193,7 +207,8 @@
         </div>
       </div>
 
-            <div class="col-md-4">
+      <!-- ELmat และ Lmat -->
+      <div class="col-md-4">
         <div class="card product-card" data-bs-toggle="modal" data-bs-target="#food3">
           <img src="https://via.placeholder.com/400x250?text=ELmat+%26+Lmat" class="card-img-top">
           <div class="card-body text-center">
@@ -208,41 +223,24 @@
 </section>
 
 
-<div class="modal fade" id="larva1" tabindex="-1" aria-labelledby="larva1Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content text-center p-4">
-      <img src="images/hercules-larva.jpg" class="img-fluid rounded mb-3" alt="Hercules Larva">
-      <h4 class="mb-3 text-success" id="larva1Label">- หนอนกว่างเฮอคิวริส / Dynastes hercules </h4>
-      
-      <form id="orderForm" class="text-start mb-4">
-        <h5 class="mb-3 fw-bold text-dark">🔥 กรุณาเลือกตัวเลือกสินค้า:</h5>
-        
-        <div class="form-check mb-2">
-          <input class="form-check-input" type="radio" name="larvaOption" id="option1" value="หนอน L1-2 500/ตัว จัดโปร 3 ตัว 1300 ส่งฟรี" checked>
-          <label class="form-check-label" for="option1">
-            1. **ระยะ L1-2**: 500 บาท/ตัว | จัดโปร **3 ตัว 1300 บาท ส่งฟรี**
-          </label>
-        </div>
-        
-        <div class="form-check mb-4">
-          <input class="form-check-input" type="radio" name="larvaOption" id="option2" value="หนอนรู้เพศ L3 ต้น คู่ละ 1200">
-          <label class="form-check-label" for="option2">
-            2. แบบ **รู้เพศ L3 ต้น**: คู่ละ **1200 บาท**
-          </label>
-        </div>
-        
-        <div class="input-group">
-          <span class="input-group-text fw-bold bg-success text-white">จำนวนที่ต้องการ (ชุด/ตัว/คู่)</span>
-          <input type="number" class="form-control text-center" id="quantity" value="1" min="1" aria-label="Quantity">
-        </div>
-
-      </form>
-      <button type="button" id="buyButton" class="btn btn-success btn-lg w-100 btn-buy">สั่งซื้อผ่าน Messenger 💬</button>
-      
-    </div>
-  </div>
+<!-- ================= MODALS ================= -->
+<!-- larva Set -->
+<div class="modal fade" id="larva1" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content text-center">
+      <img src="images/hercules-larva.jpg" class="img-fluid rounded mb-3" alt="Hercules">
+      <h4 class="mb-3 text-success">- หนอนกว่างเฮอคิวริส / Dynastes hercules </h4>
+      <p>🔥 1000 บาท ส่งฟรี 🔥<br>ในชุดประกอบด้วย:<br>
+        1. หนอน L3 ผู้-เมีย<br>
+        2. กระปุก 2 ใบ<br>
+        3. อาหารตัวอ่อน 1 ถุง<br>
+        4. ใบจดน้ำหนัก 1 ใบ</p>
+      <a href="https://m.me/PhuBaoKhaiDuangBeetles?text=สวัสดีครับ สนใจหนอนกว่างเฮอคิวริส 1 ตัว" target="_blank" class="btn-buy w-100">สั่งซื้อผ่าน Messenger</a>
+    </div>
+  </div>
 </div>
   
+<!-- Modal Set -->
 <div class="modal fade" id="set1" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content text-center">
@@ -258,6 +256,7 @@
   </div>
 </div>
 
+<!-- Modal Accessory -->
 <div class="modal fade" id="acc1" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content text-center">
@@ -271,6 +270,7 @@
   </div>
 </div>
 
+<!-- Modal Food -->
 <div class="modal fade" id="food1" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content text-center">
@@ -304,6 +304,7 @@
   </div>
 </div>
 
+<!-- Footer -->
 <footer class="footer text-center">
   <div class="container">
     <h5>ติดต่อเรา</h5>
@@ -316,49 +317,5 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // กำหนดให้ Event Listener ทำงานกับปุ่มสั่งซื้อภายใน Modal larva1 เท่านั้น
-    const buyButton = document.getElementById('buyButton');
-
-    // ตรวจสอบว่าปุ่มมีอยู่จริงก่อนเพิ่ม Event Listener
-    if (buyButton) {
-      buyButton.addEventListener('click', function() {
-        // 1. ดึงค่าตัวเลือกที่ถูกเลือก (Radio Button ที่ชื่อว่า larvaOption)
-        const selectedOptionElement = document.querySelector('input[name="larvaOption"]:checked');
-        
-        // ตรวจสอบว่ามีการเลือกตัวเลือกหรือไม่ (ปกติ Radio Button จะมีตัวที่ถูกเลือกเป็นค่าเริ่มต้น)
-        if (!selectedOptionElement) {
-          alert("กรุณาเลือกตัวเลือกสินค้าก่อนครับ/ค่ะ");
-          return;
-        }
-        
-        const selectedOption = selectedOptionElement.value;
-        
-        // 2. ดึงค่าจำนวนที่ลูกค้าใส่
-        const quantityInput = document.getElementById('quantity');
-        const quantity = quantityInput ? quantityInput.value : '1'; // ใส่ค่าเริ่มต้นเป็น '1' หากหา input ไม่เจอ
-        
-        // 3. สร้างข้อความที่จะส่งไปยัง Messenger
-        const message = `สวัสดีครับ สนใจหนอนกว่างเฮอคิวริส: 
-- ตัวเลือก: ${selectedOption}
-- จำนวน: ${quantity}
-
-(รบกวนแอดมินยืนยันยอดและรายละเอียดการจัดส่งด้วยครับ/ค่ะ)`;
-        
-        // 4. เข้ารหัสข้อความเพื่อให้ส่งผ่าน URL ได้อย่างถูกต้อง
-        const encodedMessage = encodeURIComponent(message);
-        
-        // 5. สร้าง URL ของ Messenger
-        const messengerUrl = `https://m.me/PhuBaoKhaiDuangBeetles?text=${encodedMessage}`;
-        
-        // 6. เปิดหน้าต่าง Messenger ใหม่
-        window.open(messengerUrl, '_blank');
-      });
-    }
-  });
-</script>
-
 </body>
 </html>
